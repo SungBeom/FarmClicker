@@ -1,0 +1,1719 @@
+fileFormatVersion: 2
+guid: b7fa92030b347a049b54c120e133a518
+timeCreated: 1470940556
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Artichoke
+    21300002: Asparagus
+    21300004: Asparagus - White
+    21300006: Beet
+    21300008: Bok Choy
+    21300010: Broccoli
+    21300012: Brussel Sprout
+    21300014: Cabbage
+    21300016: Cabbage Leaf
+    21300018: Cabbage - Red
+    21300020: Cabbage Leaf - Red
+    21300022: Cabbage - Chinese
+    21300024: Carrot - Full
+    21300026: Carrot
+    21300028: Cauliflower
+    21300030: Cauliflower - Purple
+    21300032: Cauliflower - Orange
+    21300034: Celery
+    21300036: Artichoke Slice
+    21300038: Asparagus Bunch
+    21300040: Asparagus Bunch - White
+    21300042: Beet Half Slice
+    21300044: Beet Slice
+    21300046: Bok Choy Leaf
+    21300048: Broccoli Floret
+    21300050: Cabbage Half
+    21300052: Cabbage Half - Red
+    21300054: Cabbage - Chinese - Leaf
+    21300056: Carrot Slice
+    21300058: Carrot - Baby
+    21300060: Cauliflower Floret
+    21300062: Cauliflower Floret - Purple
+    21300064: Cauliflower Floret - Orange
+    21300066: Celery Stalk
+    21300068: Artichoke Petal
+    21300070: Celery Slice
+    21300072: Chard
+    21300074: Corn
+    21300076: Corn Cob
+    21300078: Cucumber
+    21300080: Eggplant
+    21300082: Eggplant - Purple
+    21300084: Fiddlehead
+    21300086: Garlic
+    21300088: Ginger
+    21300090: Green Bean
+    21300092: Horseradish
+    21300094: Kale
+    21300096: Leek
+    21300098: Lettuce
+    21300100: Mushroom
+    21300102: Okra
+    21300104: Onion
+    21300106: Onion - Red
+    21300108: Onion - White
+    21300110: Pea Pod
+    21300112: Eggplant - Long
+    21300114: Eggplant - Short
+    21300116: Eggplant - Purple - Long
+    21300118: Eggplant - Purple - Short
+    21300120: Garlic Clove
+    21300122: Ginger Slice
+    21300124: Wax Bean
+    21300126: Mushroom Slice
+    21300128: Okra Half Slice
+    21300130: Onion - Side Slice
+    21300132: Onion - Red - Side Slice
+    21300134: Onion - White - Side Slice
+    21300136: Pea Pod - Open
+    21300138: Corn - Peeled
+    21300140: Cucumber Half
+    21300142: Garlic Clove - Peeled
+    21300144: Kale Leaf
+    21300146: Leek Slice - White
+    21300148: Lettuce Leaf
+    21300150: Okra Slice
+    21300152: Onion - Middle Slice
+    21300154: Onion - Red - Middle Slice
+    21300156: Onion - White - Middle Slice
+    21300158: Pea
+    21300160: Cucumber Slice
+    21300162: Eggplant Slice
+    21300164: Eggplant - Purple - Slice
+    21300166: Leek Slice - Green
+    21300168: Pepper - Bell - Green
+    21300170: Pepper - Bell - Red
+    21300172: Pepper - Bell - Yellow
+    21300174: Pepper - Bell - Orange
+    21300176: Pepper - Chili
+    21300178: Pepper - Jalapeno
+    21300180: Potato
+    21300182: Pumkin
+    21300184: Radish
+    21300186: Squash - Acorn
+    21300188: Squash - Butternut
+    21300190: Squash - Spaghetti
+    21300192: Taro
+    21300194: Tomato 1
+    21300196: Tomato 2
+    21300198: Turnip
+    21300200: Yam
+    21300202: Zucchini
+    21300204: Pepper - Bell - Green - Half Slice
+    21300206: Pepper - Bell - Red - Half Slice
+    21300208: Pepper - Bell - Yellow - Half Slice
+    21300210: Pepper - Bell - Orange - Half Slice
+    21300212: Pepper - Chili - Half Slice
+    21300214: Pepper - Jalapeno - Half Slice
+    21300216: Potato Slice 1
+    21300218: Radish Slice
+    21300220: Squash - Acorn - Slice
+    21300222: Taro Half Slice
+    21300224: Tomato 1 Slice
+    21300226: Tomato 2 Slice
+    21300228: Yam Half Slice
+    21300230: Pepper - Bell - Green - Slice
+    21300232: Pepper - Bell - Red - Slice
+    21300234: Pepper - Bell - Yellow - Slice
+    21300236: Pepper - Bell - Orange - Slice
+    21300238: Pepper - Chili - Slice
+    21300240: Pepper - Jalapeno - Slice
+    21300242: Potato Slice 2
+    21300244: Pumkin Slice
+    21300246: Squash - Butternut - Slice
+    21300248: Squash - Spaghetti - Slice
+    21300250: Taro Slice
+    21300252: Tomato Slice
+    21300254: Turnip Slice
+    21300256: Yam Slice
+    21300258: Zucchini Half Slice
+    21300260: Zucchini Slice
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Artichoke
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 405
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Asparagus
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 389
+        width: 4
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Asparagus - White
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 389
+        width: 4
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Beet
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 392
+        width: 43
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 27}
+        - {x: 14.5, y: 28}
+        - {x: -5.5, y: 28}
+        - {x: -21.5, y: 17}
+        - {x: -21.5, y: 3}
+        - {x: -10.5, y: -28}
+        - {x: 5.5, y: -28}
+        - {x: 16.5, y: -17}
+        - {x: 21.5, y: -4}
+        - {x: 21.5, y: 21}
+    - name: Bok Choy
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 402
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 23.5}
+        - {x: -16, y: -9.5}
+        - {x: -11, y: -23.5}
+        - {x: 5, y: -23.5}
+        - {x: 16, y: -6.5}
+        - {x: 16, y: 22.5}
+        - {x: 15, y: 23.5}
+    - name: Broccoli
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 395
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.5, y: 24}
+        - {x: -24.5, y: 15}
+        - {x: -24.5, y: -10}
+        - {x: -22.5, y: -17}
+        - {x: -13.5, y: -24}
+        - {x: 23.5, y: -24}
+        - {x: 24.5, y: -18}
+        - {x: 24.5, y: 24}
+    - name: Brussel Sprout
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 422
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cabbage
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 399
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 19.5}
+        - {x: -21.5, y: 12.5}
+        - {x: -21.5, y: -19.5}
+        - {x: 21.5, y: -19.5}
+        - {x: 21.5, y: 16.5}
+        - {x: 20.5, y: 19.5}
+    - name: Cabbage Leaf
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 396
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cabbage - Red
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 399
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 19.5}
+        - {x: -21.5, y: 12.5}
+        - {x: -21.5, y: -19.5}
+        - {x: 21.5, y: -19.5}
+        - {x: 21.5, y: 16.5}
+        - {x: 20.5, y: 19.5}
+    - name: Cabbage Leaf - Red
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 396
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cabbage - Chinese
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 392
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Carrot - Full
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 387
+        width: 20
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Carrot
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 396
+        width: 7
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cauliflower
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 398
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 18}
+        - {x: -22, y: 15}
+        - {x: -22, y: -12}
+        - {x: -20, y: -18}
+        - {x: 22, y: -18}
+        - {x: 22, y: 11}
+        - {x: 12, y: 18}
+    - name: Cauliflower - Purple
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 398
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 18}
+        - {x: -22, y: 15}
+        - {x: -22, y: -12}
+        - {x: -20, y: -18}
+        - {x: 22, y: -18}
+        - {x: 22, y: 11}
+        - {x: 12, y: 18}
+    - name: Cauliflower - Orange
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 398
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 18}
+        - {x: -22, y: 15}
+        - {x: -22, y: -12}
+        - {x: -20, y: -18}
+        - {x: 22, y: -18}
+        - {x: 22, y: 11}
+        - {x: 12, y: 18}
+    - name: Celery
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 389
+        width: 31
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Artichoke Slice
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 359
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Asparagus Bunch
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 328
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Asparagus Bunch - White
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 328
+        width: 18
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Beet Half Slice
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 358
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Beet Slice
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 358
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Bok Choy Leaf
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 355
+        width: 24
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Broccoli Floret
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 357
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cabbage Half
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 335
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 19.5}
+        - {x: -21.5, y: -19.5}
+        - {x: 15.5, y: -19.5}
+        - {x: 21.5, y: -17.5}
+        - {x: 21.5, y: 19.5}
+    - name: Cabbage Half - Red
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 335
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 19.5}
+        - {x: -21.5, y: -19.5}
+        - {x: 15.5, y: -19.5}
+        - {x: 21.5, y: -17.5}
+        - {x: 21.5, y: 19.5}
+    - name: Cabbage - Chinese - Leaf
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 329
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Carrot Slice
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 367
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Carrot - Baby
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 365
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cauliflower Floret
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 360
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cauliflower Floret - Purple
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 360
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cauliflower Floret - Orange
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 360
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Celery Stalk
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 366
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Artichoke Petal
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 328
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Celery Slice
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 333
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Chard
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 226
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Corn
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 226
+        width: 14
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Corn Cob
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 238
+        width: 11
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cucumber
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 230
+        width: 15
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 262
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant - Purple
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 262
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Fiddlehead
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 264
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Garlic
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 263
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ginger
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 264
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Green Bean
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 260
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Horseradish
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 230
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kale
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 238
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: 9}
+        - {x: 15, y: 20}
+        - {x: -18, y: 20}
+        - {x: -31, y: 5}
+        - {x: -31, y: -19}
+        - {x: -29, y: -20}
+        - {x: 31, y: -20}
+    - name: Leek
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 228
+        width: 19
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Lettuce
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 241
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 17.5}
+        - {x: -20, y: 15.5}
+        - {x: -20, y: -17.5}
+        - {x: 15, y: -17.5}
+        - {x: 20, y: -15.5}
+        - {x: 20, y: 16.5}
+        - {x: 16, y: 17.5}
+    - name: Mushroom
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 266
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Okra
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 258
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 262
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - Red
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 262
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - White
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 262
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pea Pod
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 262
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant - Long
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 196
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant - Short
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 207
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant - Purple - Long
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 196
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant - Purple - Short
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 207
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Garlic Clove
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 235
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Ginger Slice
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 236
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Wax Bean
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 228
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Mushroom Slice
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 235
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Okra Half Slice
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 226
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - Side Slice
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 231
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - Red - Side Slice
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 231
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - White - Side Slice
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 231
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pea Pod - Open
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 229
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Corn - Peeled
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 167
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cucumber Half
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 203
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Garlic Clove - Peeled
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 206
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kale Leaf
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 171
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Leek Slice - White
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 206
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Lettuce Leaf
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 195
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Okra Slice
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 206
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - Middle Slice
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 201
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - Red - Middle Slice
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 201
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Onion - White - Middle Slice
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 201
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pea
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 208
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Cucumber Slice
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 171
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant Slice
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Eggplant - Purple - Slice
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Leek Slice - Green
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 173
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Green
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 100
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Red
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 100
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Yellow
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 100
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Orange
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Chili
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 99
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Jalapeno
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 100
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Potato
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 102
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pumkin
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 70
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 29}
+        - {x: -29.5, y: 11}
+        - {x: -29.5, y: -23}
+        - {x: -26.5, y: -29}
+        - {x: 26.5, y: -29}
+        - {x: 29.5, y: -21}
+        - {x: 29.5, y: 14}
+        - {x: 3.5, y: 29}
+    - name: Radish
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 99
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Squash - Acorn
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 100
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Squash - Butternut
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 72
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Squash - Spaghetti
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 75
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Taro
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 102
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Tomato 1
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 104
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Tomato 2
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 105
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Turnip
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 75
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Yam
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 105
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Zucchini
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 68
+        width: 15
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Green - Half Slice
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 68
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Red - Half Slice
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 68
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Yellow - Half Slice
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Orange - Half Slice
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 68
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Chili - Half Slice
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 67
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Jalapeno - Half Slice
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 68
+        width: 10
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Potato Slice 1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 72
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Radish Slice
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 75
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Squash - Acorn - Slice
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 68
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Taro Half Slice
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 71
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Tomato 1 Slice
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 72
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Tomato 2 Slice
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 73
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Yam Half Slice
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 73
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Green - Slice
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 40
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Red - Slice
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 40
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Yellow - Slice
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 40
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Bell - Orange - Slice
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 40
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Chili - Slice
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 45
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pepper - Jalapeno - Slice
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 43
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Potato Slice 2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 40
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pumkin Slice
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 37
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Squash - Butternut - Slice
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 8
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Squash - Spaghetti - Slice
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 10
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Taro Slice
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Tomato Slice
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 44
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Turnip Slice
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 38
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Yam Slice
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 42
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Zucchini Half Slice
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 43
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Zucchini Slice
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 10
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
