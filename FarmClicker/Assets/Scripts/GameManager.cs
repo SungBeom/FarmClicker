@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
         set { select = value; }
     }
 
-    // plant에 해당하는 배열 -> 개수 넣기
     public int[] plantCount;
+
+    void Start()
+    {
+        // 임시로 추가
+        plantCount = new int[3];
+    }
 }

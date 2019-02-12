@@ -37,11 +37,13 @@ public class GrowPlant : MonoBehaviour
         if (growState == GrowState.CanGrow) StartCoroutine("Growing");
         else if (growState == GrowState.CanHarvest)
         {
-            Debug.Log("Harvest!");
+            Debug.Log("Harvest!");//
             image.GetComponent<Image>().sprite = null;
             image.localScale = Vector3.one;
             image.transform.position = new Vector3(image.transform.position.x, 1.1458333333f, image.transform.position.z);
             image.GetComponent<Image>().enabled = false;
+
+            GameManager.Instance.plantCount[num - 1]++;
 
             growState = GrowState.CanGrow;
         }

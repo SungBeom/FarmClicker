@@ -7123,6 +7123,7 @@ GameObject:
   - component: {fileID: 989666400}
   - component: {fileID: 989666402}
   - component: {fileID: 989666401}
+  - component: {fileID: 989666403}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -7188,6 +7189,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989666399}
   m_CullTransparentMesh: 0
+--- !u!114 &989666403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989666399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7611e7ad26af08a409b8022281ffe4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantList: {fileID: 2129226644}
 --- !u!1 &989907609
 GameObject:
   m_ObjectHideFlags: 0
@@ -7774,7 +7788,7 @@ GameObject:
   - component: {fileID: 1064969954}
   - component: {fileID: 1064969953}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InventoryBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12202,6 +12216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ead8fa46b690e1498e66168034059a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantCount: 000000000000000000000000
 --- !u!4 &1585099791
 Transform:
   m_ObjectHideFlags: 0
