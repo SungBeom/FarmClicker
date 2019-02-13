@@ -22,5 +22,8 @@ public class AddFood : MonoBehaviour
 
         count += addCount;
         foodCount.text = "x" + count.ToString();
+
+        GameManager.Instance.plantCount[0]--;
+        GameManager.Instance.plantCount[1]--;
     }
 }
