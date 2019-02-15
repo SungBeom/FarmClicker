@@ -7,17 +7,37 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     public static GameManager Instance
     {
-        get
-        {
-            if (instance == null)
-            {
-                GameObject tempGM = new GameObject("GameManager");
-                instance = tempGM.AddComponent<GameManager>();
-                DontDestroyOnLoad(tempGM);
-            }
-            return instance;
-        }
+        get { return instance; }
     }
+    //public static GameManager Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //            GameObject tempGM = new GameObject("GameManager");
+    //            instance = tempGM.AddComponent<GameManager>();
+    //            DontDestroyOnLoad(tempGM);
+    //        }
+    //        return instance;
+    //    }
+    //}
+
+    void Awake()
+    {
+        if (instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public int[] plantCount;
+
+    public Font mainFont;
 
     [System.Serializable]
     public enum Vegetable { test1, test2, test3 };
@@ -26,13 +46,5 @@ public class GameManager : MonoBehaviour
     {
         get { return select; }
         set { select = value; }
-    }
-
-    public int[] plantCount;
-
-    void Start()
-    {
-        // 임시로 추가
-        plantCount = new int[3];
     }
 }

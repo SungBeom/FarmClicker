@@ -1,0 +1,122 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CreateMenu : MonoBehaviour
+{
+    public Ingredient[] ingredients;
+    [Range(1, 20)]
+    public int addingFoodCount;
+
+    Transform ingredientsHolder;
+    Transform foodCountHolder;
+
+    float ingredientWidth;
+    Vector3 ingredientCountPosition;
+    Vector2 ingredientCountSize;
+
+    Vector3 foodCountPosition;
+    Vector2 foodCountSize;
+
+    void Awake()
+    {
+        ingredientWidth = 150f;
+        ingredientCountPosition = new Vector3(0f, 40f, 0f);
+        ingredientCountSize = new Vector2(50f, 40f);
+
+        foodCountPosition = new Vector3(0f, 20f, 0f);
+        foodCountSize = new Vector2(50f, 40f);
+    }
+
+    void Start()
+    {
+        // Resizing ingredient array
+        if (ingredients.Length > 5)
+            System.Array.Resize(ref ingredients, 5);
+
+        // Finding Ingredients object
+        ingredientsHolder = transform.Find("Ingredients");
+
+        for (int i = 0; i < ingredients.Length; i++)
+        {
+            // Creating ingredient
+            GameObject ingredient = new GameObject("Ingredient" + (i + 1));
+            ingredient.layer = LayerMask.NameToLayer("UI");
+
+            // Add image component to ingredient
+            Image ingredientImage = ingredient.AddComponent<Image>();
+            ingredientImage.sprite = ingredients[i].ingredientImage;
+            ingredientImage.preserveAspect = true;
+
+            // Add layout element component to ingredient
+            LayoutElement ingredientLayout = ingredient.AddComponent<LayoutElement>();
+            ingredientLayout.preferredWidth = ingredientWidth;
+            ingredientLayout.preferredHeight = ingredientWidth;
+
+            // Creating ingredient count
+            GameObject ingredientCount = new GameObject("Text");
+            ingredientCount.layer = LayerMask.NameToLayer("UI");
+
+            // Add text component to ingredient count
+            Text ingredientText = ingredientCount.AddComponent<Text>();
+            ingredientText.text = "x" + (ingredients[i].ingredientCount == 0 ? 1 : ingredients[i].ingredientCount);
+            ingredientText.font = GameManager.Instance.mainFont;
+            ingredientText.fontSize = 40;
+            ingredientText.alignment = TextAnchor.MiddleCenter;
+            ingredientText.color = Color.black;
+
+            // Establishing relationship between transforms
+            ingredientCount.transform.parent = ingredient.transform;
+            ingredient.transform.parent = ingredientsHolder;
+
+            // Adjusting ingredient transform
+            ingredient.transform.position += new Vector3(0f, 0f, 90f);
+            ingredient.transform.localScale = Vector3.one;
+            RectTransform rt = ingredient.GetComponent<RectTransform>();
+            rt.sizeDelta = new Vector2(ingredientWidth, rt.sizeDelta.y);
+
+            // Adjusting ingredient count transform
+            RectTransform icrt = ingredientCount.GetComponent<RectTransform>();
+            icrt.anchorMin = Vector2.right;
+            icrt.anchorMax = Vector2.right;
+            icrt.anchoredPosition = ingredientCountPosition;
+            icrt.sizeDelta = ingredientCountSize;
+        }
+
+        // Finding FoodBtn object
+        foodCountHolder = transform.Find("FoodBtn");
+
+        // Creating food count
+        GameObject foodCount = new GameObject("Text");
+        foodCount.layer = LayerMask.NameToLayer("UI");
+
+        // Add text component to food count
+        Text foodText = foodCount.AddComponent<Text>();
+        foodText.text = "x" + (addingFoodCount == 0 ? 1 : addingFoodCount);
+        foodText.font = GameManager.Instance.mainFont;
+        foodText.fontSize = 40;
+        foodText.alignment = TextAnchor.MiddleCenter;
+        foodText.color = Color.black;
+
+        // Establishing relationship between transforms
+        foodCount.transform.parent = foodCountHolder;
+
+        // Adjusting food count transform
+        foodCount.transform.position += new Vector3(0f, 0f, 90f);
+        foodText.transform.localScale = Vector3.one;
+
+        RectTransform fcrt = foodCount.GetComponent<RectTransform>();
+        fcrt.anchorMin = Vector2.right;
+        fcrt.anchorMax = Vector2.right;
+        fcrt.anchoredPosition = foodCountPosition;
+        fcrt.sizeDelta = foodCountSize;
+    }
+
+    [System.Serializable]
+    public class Ingredient
+    {
+        public Sprite ingredientImage;
+        public int ingredientCount;
+    }
+}
