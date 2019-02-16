@@ -10034,7 +10034,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ead8fa46b690e1498e66168034059a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantCount: 000000000000000000000000
+  plants:
+  - {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - {fileID: 21300000, guid: 13223b97d3c2e64499fb73a784c52d96, type: 3}
+  - {fileID: 21300000, guid: 09d58eae71ba88946a36dbe1b2afa2df, type: 3}
+  - {fileID: 21300000, guid: aa6c1f3b1a2393f40bd686808ca24e4f, type: 3}
+  - {fileID: 21300000, guid: 078770728643a684e84c9e8d8d9355ab, type: 3}
+  - {fileID: 21300000, guid: 4e3f30015074dc64db08df6d32153c30, type: 3}
+  - {fileID: 21300000, guid: dd8fb7a9ee1aaf1428d7cff0f951ea94, type: 3}
+  - {fileID: 21300000, guid: aa3bf8b39f5871146a53d7a5a9aa8c44, type: 3}
+  - {fileID: 21300000, guid: 75abe1d015350a349be5a798380619e4, type: 3}
   mainFont: {fileID: 12800000, guid: 37794d5987838bf4687617714e68a039, type: 3}
 --- !u!4 &1585099791
 Transform:
@@ -11223,27 +11233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4059f42dd2d8b4aabd875672958ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeds:
-  - {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
-  - {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
-  - {fileID: 21300000, guid: 13223b97d3c2e64499fb73a784c52d96, type: 3}
-  - {fileID: 21300000, guid: f74afa0b1d00fc8458845b364ff7fbc8, type: 3}
-  - {fileID: 21300000, guid: c002fae844b951446aa4126953f14258, type: 3}
-  - {fileID: 21300000, guid: 078770728643a684e84c9e8d8d9355ab, type: 3}
-  - {fileID: 21300000, guid: ad9599c740a6c3941a0fdbcb46dd730a, type: 3}
-  - {fileID: 21300000, guid: 1adefd5857254cb42967ebc7df69871f, type: 3}
-  - {fileID: 21300000, guid: a2b4735a78efda04496c12faaf351cff, type: 3}
-  - {fileID: 21300000, guid: 534d780baa44ada4cb156fc4b7fd3a79, type: 3}
-  - {fileID: 21300000, guid: 20766d1bfd4665744ae93351ff565a8c, type: 3}
-  - {fileID: 21300000, guid: c2b572c8a3a9ada43aca978a38d0ea93, type: 3}
-  - {fileID: 21300000, guid: 86fb72229304f4042bc362d8e7a06b65, type: 3}
-  - {fileID: 21300000, guid: b796a451c6559544cb5a1fac53645e36, type: 3}
-  - {fileID: 21300000, guid: a8726a16af48fac47b56a307eb6ec00d, type: 3}
-  - {fileID: 21300000, guid: ca695be938c650946aa61cdac4ffca7d, type: 3}
-  - {fileID: 21300000, guid: 81b74112d368d0e4e883da6b7ffa4618, type: 3}
-  - {fileID: 21300000, guid: a0b0804e9bc481f45bd5b195671f26e4, type: 3}
-  - {fileID: 21300000, guid: 3a79791a8605a4d40b0030a56d778502, type: 3}
-  - {fileID: 21300000, guid: b49e29900a5c41b408867bcf4432be1d, type: 3}
 --- !u!1 &1866582610
 GameObject:
   m_ObjectHideFlags: 0

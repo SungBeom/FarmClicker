@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,14 +36,24 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public int[] plantCount;
+    void Start()
+    {
+        plantCount = new int[plants.Length];
+    }
+
+    public Sprite[] plants;
+    private int[] plantCount;
+    public int[] PlantCount
+    {
+        get { return plantCount; }
+    }
+
+    public enum plantName { };
 
     public Font mainFont;
 
-    [System.Serializable]
-    public enum Vegetable { test1, test2, test3 };
-    private Vegetable select;
-    public Vegetable Select
+    private int select;
+    public int Select
     {
         get { return select; }
         set { select = value; }

@@ -5,30 +5,22 @@ using UnityEngine.UI;
 
 public class GrowPlant : MonoBehaviour
 {
-    Text test;
-    Image testImage;
-    Transform image;
+    Transform vegetableImage;
+    Text test;//
 
-    int num;
+    int index;
 
-    bool canGrow;
-    // 수확 가능 여부를 나타내는 변수도 필요
     enum GrowState { CanGrow, Growing, CanHarvest };
     GrowState growState;
 
-    // Start is called before the first frame update
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
-        test = GetComponentInChildren<Text>();
-        // testImage = transform.parent.Find("Button1").Find("Image").GetComponent<Image>();
-        testImage = GetComponentInChildren<Image>();
-        image = transform.Find("Image");
-        num = 2;    // test 용
-        image.GetComponent<Image>().enabled = false;
-        image.GetComponent<Image>().sprite = Resources.Load<Sprite>("Test" + num + "-1");
 
-        canGrow = true;//
+        vegetableImage = transform.Find("Image");
+        vegetableImage.GetComponent<Image>().enabled = false;
+        test = GetComponentInChildren<Text>();//
+
         growState = GrowState.CanGrow;
     }
 
@@ -37,43 +29,41 @@ public class GrowPlant : MonoBehaviour
         if (growState == GrowState.CanGrow) StartCoroutine("Growing");
         else if (growState == GrowState.CanHarvest)
         {
-            Debug.Log("Harvest!");//
-            image.GetComponent<Image>().sprite = null;
-            image.localScale = Vector3.one;
-            image.transform.position = new Vector3(image.transform.position.x, 1.1458333333f, image.transform.position.z);
-            image.GetComponent<Image>().enabled = false;
+            vegetableImage.GetComponent<Image>().sprite = null;
+            vegetableImage.localScale = Vector3.one;
+            // 상대적인 수치로 고쳐야 함
+            vegetableImage.transform.position =
+                new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
+            //new Vector3(vegetableImage.transform.position.x, 1.1458333333f, vegetableImage.transform.position.z);
+            vegetableImage.GetComponent<Image>().enabled = false;
 
-            GameManager.Instance.plantCount[num - 1]++;
-
+            GameManager.Instance.PlantCount[index]++;
             growState = GrowState.CanGrow;
         }
     }
 
     IEnumerator Growing()
     {
-        Debug.Log(image.transform.position.y);
-        canGrow = false;//
         growState = GrowState.Growing;
-        image.GetComponent<Image>().enabled = true;
-        Debug.Log("Test" + GameManager.Instance.Select + "-1");
-        num = (int)GameManager.Instance.Select + 1;
-        image.GetComponent<Image>().sprite = Resources.Load<Sprite>("Test" + num + "-1");
+        index = GameManager.Instance.Select;
 
-        test.text = "Grow\n";
-        for (int i = 1; i <= 5; i++)
+        vegetableImage.GetComponent<Image>().enabled = true;
+        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
+
+        test.text = "Grow\n";//
+        for (int i = 1; i < 5; i++)
         {
-            test.text += ".";
-            //if (i == 1) testImage.sprite = Resources.Load<Sprite>("Test1");//
-            //else if (i == 3) testImage.sprite = Resources.Load<Sprite>("Test2");//
-            //else if (i == 5) testImage.sprite = Resources.Load<Sprite>("Test3");//
-            image.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-            image.Translate(0.0f, 0.0104166667f/*2 / 1920(높이)*/, 0.0f);
+            test.text += ".";//
+            // 크기가 커지는 방식
+            vegetableImage.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            vegetableImage.Translate(0.0f, 20f / Screen.height, 0.0f);
+            //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
             yield return new WaitForSeconds(1.0f);
         }
-        // testImage.sprite = Resources.Load<Sprite>("Test");
-        image.GetComponent<Image>().sprite = Resources.Load<Sprite>("Test" + num + "-2");
-        test.text = "Test";
-        canGrow = true;//
+        //수확 완료된 sprite 넣기(이차원 배열 사용)
+        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
+        test.text = "Test";//
+
         growState = GrowState.CanHarvest;
     }
 }

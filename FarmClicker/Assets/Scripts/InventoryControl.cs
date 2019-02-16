@@ -15,10 +15,9 @@ public class InventoryControl : MonoBehaviour
 
     void OnEnable()
     {
-        for (int i = 0; i < GameManager.Instance.plantCount.Length; i++)
+        for(int i=0; i<GameManager.Instance.plants.Length; i++)
         {
-            Debug.Log(GameManager.Instance.plantCount[i]);
-            plantCount[i].GetComponentInChildren<Text>().text = "x" + GameManager.Instance.plantCount[i];
+            plantCount[i].GetComponentInChildren<Text>().text = "x" + GameManager.Instance.PlantCount[i];
         }
     }
 }

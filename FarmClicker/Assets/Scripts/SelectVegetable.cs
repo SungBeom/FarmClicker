@@ -1,13 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectVegetable : MonoBehaviour
 {
-    public GameManager.Vegetable vegetable;
-
-    public void Select()
+    private int plantIndex;
+    public int PlantIndex
     {
-        GameManager.Instance.Select = vegetable;
+        set { plantIndex = value; }
+    }
+
+    void Start()
+    {
+        gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
+    }
+
+    void ButtonClick()
+    {
+        GameManager.Instance.Select = plantIndex;
     }
 }
