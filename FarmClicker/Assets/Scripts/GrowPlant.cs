@@ -31,10 +31,9 @@ public class GrowPlant : MonoBehaviour
         {
             vegetableImage.GetComponent<Image>().sprite = null;
             vegetableImage.localScale = Vector3.one;
-            // 상대적인 수치로 고쳐야 함
             vegetableImage.transform.position =
-                new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
-            //new Vector3(vegetableImage.transform.position.x, 1.1458333333f, vegetableImage.transform.position.z);
+                new Vector3(vegetableImage.transform.position.x, 1.1458333333f, vegetableImage.transform.position.z);
+            //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
             vegetableImage.GetComponent<Image>().enabled = false;
 
             GameManager.Instance.PlantCount[index]++;

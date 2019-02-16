@@ -16,6 +16,8 @@ public class CreateMenu : MonoBehaviour
     Vector3 ingredientCountPosition;
     Vector2 ingredientCountSize;
 
+    int fontSize;
+
     Vector3 foodCountPosition;
     Vector2 foodCountSize;
 
@@ -24,6 +26,8 @@ public class CreateMenu : MonoBehaviour
         ingredientWidth = 150f;
         ingredientCountPosition = new Vector3(0f, 40f, 0f);
         ingredientCountSize = new Vector2(50f, 40f);
+
+        fontSize = 40;
 
         foodCountPosition = new Vector3(0f, 20f, 0f);
         foodCountSize = new Vector2(50f, 40f);
@@ -62,7 +66,7 @@ public class CreateMenu : MonoBehaviour
             Text ingredientText = ingredientCount.AddComponent<Text>();
             ingredientText.text = "x" + (ingredients[i].ingredientCount == 0 ? 1 : ingredients[i].ingredientCount);
             ingredientText.font = GameManager.Instance.mainFont;
-            ingredientText.fontSize = 40;
+            ingredientText.fontSize = fontSize;
             ingredientText.alignment = TextAnchor.MiddleCenter;
             ingredientText.color = Color.black;
 
@@ -95,7 +99,7 @@ public class CreateMenu : MonoBehaviour
         Text foodText = foodCount.AddComponent<Text>();
         foodText.text = "x" + (addingFoodCount == 0 ? 1 : addingFoodCount);
         foodText.font = GameManager.Instance.mainFont;
-        foodText.fontSize = 40;
+        foodText.fontSize = fontSize;
         foodText.alignment = TextAnchor.MiddleCenter;
         foodText.color = Color.black;
 
