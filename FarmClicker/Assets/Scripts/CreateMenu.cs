@@ -31,16 +31,16 @@ public class CreateMenu : MonoBehaviour
 
     void Start()
     {
-        // Resizing ingredient array
+        // Resize ingredient array
         if (ingredients.Length > 5)
             System.Array.Resize(ref ingredients, 5);
 
-        // Finding Ingredients object
+        // Find Ingredients object
         ingredientsHolder = transform.Find("Ingredients");
 
         for (int i = 0; i < ingredients.Length; i++)
         {
-            // Creating ingredient
+            // Create ingredient
             GameObject ingredient = new GameObject("Ingredient" + (i + 1));
             ingredient.layer = LayerMask.NameToLayer("UI");
 
@@ -54,7 +54,7 @@ public class CreateMenu : MonoBehaviour
             ingredientLayout.preferredWidth = ingredientWidth;
             ingredientLayout.preferredHeight = ingredientWidth;
 
-            // Creating ingredient count
+            // Create ingredient count
             GameObject ingredientCount = new GameObject("Text");
             ingredientCount.layer = LayerMask.NameToLayer("UI");
 
@@ -66,17 +66,17 @@ public class CreateMenu : MonoBehaviour
             ingredientText.alignment = TextAnchor.MiddleCenter;
             ingredientText.color = Color.black;
 
-            // Establishing relationship between transforms
+            // Establish relationship between transforms
             ingredientCount.transform.parent = ingredient.transform;
             ingredient.transform.parent = ingredientsHolder;
 
-            // Adjusting ingredient transform
+            // Adjust ingredient transform
             ingredient.transform.position += new Vector3(0f, 0f, 90f);
             ingredient.transform.localScale = Vector3.one;
             RectTransform rt = ingredient.GetComponent<RectTransform>();
             rt.sizeDelta = new Vector2(ingredientWidth, rt.sizeDelta.y);
 
-            // Adjusting ingredient count transform
+            // Adjust ingredient count transform
             RectTransform icrt = ingredientCount.GetComponent<RectTransform>();
             icrt.anchorMin = Vector2.right;
             icrt.anchorMax = Vector2.right;
@@ -84,10 +84,10 @@ public class CreateMenu : MonoBehaviour
             icrt.sizeDelta = ingredientCountSize;
         }
 
-        // Finding FoodBtn object
+        // Find FoodBtn object
         foodCountHolder = transform.Find("FoodBtn");
 
-        // Creating food count
+        // Create food count
         GameObject foodCount = new GameObject("Text");
         foodCount.layer = LayerMask.NameToLayer("UI");
 
@@ -99,10 +99,10 @@ public class CreateMenu : MonoBehaviour
         foodText.alignment = TextAnchor.MiddleCenter;
         foodText.color = Color.black;
 
-        // Establishing relationship between transforms
+        // Establish relationship between transforms
         foodCount.transform.parent = foodCountHolder;
 
-        // Adjusting food count transform
+        // Adjust food count transform
         foodCount.transform.position += new Vector3(0f, 0f, 90f);
         foodText.transform.localScale = Vector3.one;
 
