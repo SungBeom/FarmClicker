@@ -71,8 +71,8 @@ public class CreateMenu : MonoBehaviour
             ingredientText.color = Color.black;
 
             // Establish relationship between transforms
-            ingredientCount.transform.parent = ingredient.transform;
-            ingredient.transform.parent = ingredientsHolder;
+            ingredientCount.transform.SetParent(ingredient.transform, false);
+            ingredient.transform.SetParent(ingredientsHolder, false);
 
             // Adjust ingredient transform
             ingredient.transform.position += new Vector3(0f, 0f, 90f);
@@ -103,8 +103,10 @@ public class CreateMenu : MonoBehaviour
         foodText.alignment = TextAnchor.MiddleCenter;
         foodText.color = Color.black;
 
+        foodCountHolder.GetComponent<AddFood>().AddCount = (addingFoodCount == 0 ? 1 : addingFoodCount);
+
         // Establish relationship between transforms
-        foodCount.transform.parent = foodCountHolder;
+        foodCount.transform.SetParent(foodCountHolder, false);
 
         // Adjust food count transform
         foodCount.transform.position += new Vector3(0f, 0f, 90f);

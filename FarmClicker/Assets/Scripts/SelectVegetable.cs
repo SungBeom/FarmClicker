@@ -14,10 +14,15 @@ public class SelectVegetable : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
+        GetComponent<Image>().color = Color.grey;
     }
 
     void ButtonClick()
     {
+        int temp = GameManager.Instance.Select;
         GameManager.Instance.Select = plantIndex;
+
+        transform.parent.GetChild(temp).GetComponent<Image>().color = Color.grey;
+        GetComponent<Image>().color = Color.white;
     }
 }

@@ -6,18 +6,13 @@ using UnityEngine.UI;
 public class InventoryControl : MonoBehaviour
 {
     public Transform plantList;
-    Text[] plantCount;
-
-    void Awake()
-    {
-        plantCount = plantList.GetComponentsInChildren<Text>();
-    }
 
     void OnEnable()
     {
-        for(int i=0; i<GameManager.Instance.plants.Length; i++)
+        if (GameManager.Instance.InventoryFlag)
         {
-            plantCount[i].GetComponentInChildren<Text>().text = "x" + GameManager.Instance.PlantCount[i];
+            for (int i = 0; i < GameManager.Instance.plants.Length; i++)
+                plantList.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.PlantCount[i];
         }
     }
 }

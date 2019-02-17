@@ -62,9 +62,9 @@ public class CreateInventory : MonoBehaviour
             cropText.color = Color.black;
 
             // Establish relationship between transforms
-            cropImage.transform.parent = crop.transform;
-            cropText.transform.parent = crop.transform;
-            crop.transform.parent = transform;
+            cropImage.transform.SetParent(crop.transform, false);
+            cropText.transform.SetParent(crop.transform, false);
+            crop.transform.SetParent(transform, false);
 
             // Adjust crop transform
             crop.transform.position += new Vector3(0f, 0f, 90f);
@@ -86,5 +86,7 @@ public class CreateInventory : MonoBehaviour
             ccrt.anchoredPosition = Vector3.zero;
             ccrt.sizeDelta = Vector2.zero;
         }
+
+        GameManager.Instance.InventoryFlag = true;
     }
 }

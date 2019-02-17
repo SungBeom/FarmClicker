@@ -58,4 +58,11 @@ public class GameManager : MonoBehaviour
         get { return select; }
         set { select = value; }
     }
+
+    private bool inventoryFlag = false;
+    public bool InventoryFlag
+    {
+        get { return inventoryFlag; }
+        set { inventoryFlag = value; }
+    }
 }

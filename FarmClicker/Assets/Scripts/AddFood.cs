@@ -6,13 +6,17 @@ using UnityEngine.UI;
 public class AddFood : MonoBehaviour
 {
     public Text foodCount;
-    int addCount;
 
-    // Start is called before the first frame update
+    private int addCount;
+    public int AddCount
+    {
+        get { return addCount; }
+        set { addCount = value; }
+    }
+
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
-        int.TryParse(gameObject.GetComponentInChildren<Text>().text.Substring(1), out addCount);
     }
 
     void ButtonClick()
