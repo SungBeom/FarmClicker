@@ -49,8 +49,6 @@ public class CreateSeed : MonoBehaviour
             // Establish relationship between transforms
             image.transform.SetParent(seed.transform, false);
             seed.transform.SetParent(transform, false);
-            //image.transform.parent = seed.transform;
-            //seed.transform.parent = transform;
 
             // Adjust seed transform
             seed.transform.position += new Vector3(0f, 0f, 90f);

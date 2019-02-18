@@ -7,6 +7,8 @@ public class CreateInventory : MonoBehaviour
 {
     Color backgroundColor;
 
+    Vector2 outlineSize;
+
     float cropHeight;
 
     int fontSize;
@@ -17,14 +19,23 @@ public class CreateInventory : MonoBehaviour
     void Awake()
     {
         backgroundColor = Color.white;
-        backgroundColor.a = 75f / 255f;
+        backgroundColor.a = 150f / 255f;
 
-        cropHeight = 200f;
+        outlineSize = new Vector2(4f, -3f);
 
         fontSize = 50;
 
         ciAnchorMax = new Vector2(0.5f, 1f);
         ccAnchorMin = new Vector3(0.5f, 0f);
+    }
+
+    void OnEnable()
+    {
+        if (GameManager.Instance.InventoryFlag)
+        {
+            for (int i = 0; i < GameManager.Instance.plants.Length; i++)
+                transform.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.PlantCount[i];
+        }
     }
 
     void Start()
@@ -35,10 +46,13 @@ public class CreateInventory : MonoBehaviour
             GameObject crop = new GameObject("Crop" + (i + 1));
             crop.layer = LayerMask.NameToLayer("UI");
 
-            // Add image coponent to crop
+            // Add image component to crop
             Image backgroundImage = crop.AddComponent<Image>();
-            // backgroundImage.sprite =
             backgroundImage.color = backgroundColor;
+
+            // Add outline component to crop
+            Outline outline = crop.AddComponent<Outline>();
+            outline.effectDistance = outlineSize;
 
             // Create crop image
             GameObject cropImage = new GameObject("Image");
@@ -67,10 +81,7 @@ public class CreateInventory : MonoBehaviour
             crop.transform.SetParent(transform, false);
 
             // Adjust crop transform
-            crop.transform.position += new Vector3(0f, 0f, 90f);
             crop.transform.localScale = Vector3.one;
-            RectTransform rt = crop.GetComponent<RectTransform>();
-            crop.GetComponent<RectTransform>().sizeDelta = new Vector2(rt.sizeDelta.x, cropHeight);
 
             // Adjust crop image transform
             RectTransform cirt = cropImage.GetComponent<RectTransform>();
