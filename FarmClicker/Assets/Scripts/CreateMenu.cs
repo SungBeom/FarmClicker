@@ -75,7 +75,6 @@ public class CreateMenu : MonoBehaviour
             ingredient.transform.SetParent(ingredientsHolder, false);
 
             // Adjust ingredient transform
-            ingredient.transform.position += new Vector3(0f, 0f, 90f);
             ingredient.transform.localScale = Vector3.one;
             RectTransform rt = ingredient.GetComponent<RectTransform>();
             rt.sizeDelta = new Vector2(ingredientWidth, rt.sizeDelta.y);
@@ -109,7 +108,6 @@ public class CreateMenu : MonoBehaviour
         foodCount.transform.SetParent(foodCountHolder, false);
 
         // Adjust food count transform
-        foodCount.transform.position += new Vector3(0f, 0f, 90f);
         foodText.transform.localScale = Vector3.one;
 
         RectTransform fcrt = foodCount.GetComponent<RectTransform>();
