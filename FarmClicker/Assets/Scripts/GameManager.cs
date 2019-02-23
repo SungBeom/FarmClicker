@@ -38,14 +38,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        plantCount = new int[plants.Length];
+        cropCount = new int[16];
+        //cropCount = new int[crops[0].cropSprites.Length];
     }
 
-    public Sprite[] plants;
-    private int[] plantCount;
-    public int[] PlantCount
+    public Crop[] crops;
+    private int[] cropCount;
+    public int[] CropCount
     {
-        get { return plantCount; }
+        get { return cropCount; }
     }
 
     public enum plantName { };
@@ -64,5 +65,11 @@ public class GameManager : MonoBehaviour
     {
         get { return inventoryFlag; }
         set { inventoryFlag = value; }
+    }
+
+    [System.Serializable]
+    public class Crop
+    {
+        public Sprite[] cropSprites;
     }
 }

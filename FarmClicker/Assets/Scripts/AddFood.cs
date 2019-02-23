@@ -28,7 +28,7 @@ public class AddFood : MonoBehaviour
         foodCount.text = "x" + count.ToString();
 
         // Test용 코드
-        GameManager.Instance.PlantCount[0]--;
-        GameManager.Instance.PlantCount[1]--;
+        GameManager.Instance.CropCount[0]--;
+        GameManager.Instance.CropCount[1]--;
     }
 }

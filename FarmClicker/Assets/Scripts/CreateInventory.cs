@@ -33,14 +33,14 @@ public class CreateInventory : MonoBehaviour
     {
         if (GameManager.Instance.InventoryFlag)
         {
-            for (int i = 0; i < GameManager.Instance.plants.Length; i++)
-                transform.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.PlantCount[i];
+            for (int i = 0; i < GameManager.Instance.crops.Length; i++)
+                transform.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i];
         }
     }
 
     void Start()
     {
-        for (int i = 0; i < GameManager.Instance.plants.Length; i++)
+        for (int i = 0; i < GameManager.Instance.crops[0].cropSprites.Length; i++)
         {
             // Create crop
             GameObject crop = new GameObject("Crop" + (i + 1));
@@ -60,7 +60,8 @@ public class CreateInventory : MonoBehaviour
 
             // Add image component to crop image
             Image image = cropImage.AddComponent<Image>();
-            image.sprite = GameManager.Instance.plants[i];
+            image.sprite = GameManager.Instance.crops[0].cropSprites[i];
+            //image.sprite = GameManager.Instance.plants[i];
             image.preserveAspect = true;
 
             // Create crop count
@@ -69,7 +70,7 @@ public class CreateInventory : MonoBehaviour
 
             // Add text component to crop count
             Text cropText = cropCount.AddComponent<Text>();
-            cropText.text = "x" + GameManager.Instance.PlantCount[i];
+            cropText.text = "x" + GameManager.Instance.CropCount[i];
             cropText.font = GameManager.Instance.mainFont;
             cropText.fontSize = fontSize;
             cropText.alignment = TextAnchor.MiddleCenter;
