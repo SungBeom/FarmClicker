@@ -33,7 +33,7 @@ public class CreateInventory : MonoBehaviour
     {
         if (GameManager.Instance.InventoryFlag)
         {
-            for (int i = 0; i < GameManager.Instance.crops.Length; i++)
+            for (int i = 0; i < GameManager.Instance.crops[0].cropSprites.Length; i++)
                 transform.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i];
         }
     }
