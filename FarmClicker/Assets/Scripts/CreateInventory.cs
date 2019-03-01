@@ -43,6 +43,8 @@ public class CreateInventory : MonoBehaviour
     {
         if (GameManager.Instance.InventoryFlag)
         {
+            // Transform child out of bounds 에러 -> 인덱스 문제 찾아서 수정 요망
+            // "씨앗심기", "작물목록" 각 1회 이후에 작물목록을 클릭하면 발생함
             for (int i = 0; i < GameManager.Instance.crops[0].cropSprites.Length; i++)
                 transform.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i];
         }
@@ -79,7 +81,7 @@ public class CreateInventory : MonoBehaviour
 
                 // Add image component to crop image
                 Image image = cropImage.AddComponent<Image>();
-                image.sprite = GameManager.Instance.crops[0].cropSprites[j];
+                image.sprite = GameManager.Instance.crops[i].cropSprites[j];
                 //image.sprite = GameManager.Instance.plants[i];
                 image.preserveAspect = true;
 
