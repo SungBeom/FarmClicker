@@ -43,10 +43,14 @@ public class CreateInventory : MonoBehaviour
     {
         if (GameManager.Instance.InventoryFlag)
         {
-            // Transform child out of bounds 에러 -> 인덱스 문제 찾아서 수정 요망
-            // "씨앗심기", "작물목록" 각 1회 이후에 작물목록을 클릭하면 발생함
-            for (int i = 0; i < GameManager.Instance.crops[0].cropSprites.Length; i++)
-                transform.GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i];
+            // 현재 첫 번째 GetChild를 할 때 상수(0)을 넣어 채소 목록과 과일 목록 모두를 채소 목록을 갱신하는 방식
+            // CropCount를 2차원 배열로 수정하여 과일의 개수도 추척, 관리하는 방식으로 변경
+            //for (int i = 0; i < GameManager.Instance.crops[0].cropSprites.Length; i++)
+            //    transform.GetChild(0).GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i];
+            for (int i = 0; i < GameManager.Instance.crops.Length; i++)
+                for (int j = 0; j < GameManager.Instance.crops[i].cropSprites.Length; j++)
+                    transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[j];
+                    // transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i][j];
         }
     }
 
