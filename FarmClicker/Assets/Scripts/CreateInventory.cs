@@ -49,7 +49,7 @@ public class CreateInventory : MonoBehaviour
             //    transform.GetChild(0).GetChild(i).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i];
             for (int i = 0; i < GameManager.Instance.crops.Length; i++)
                 for (int j = 0; j < GameManager.Instance.crops[i].cropSprites.Length; j++)
-                    transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[j];
+                    transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i][j];
                     // transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i][j];
         }
     }
@@ -95,7 +95,7 @@ public class CreateInventory : MonoBehaviour
 
                 // Add text component to crop count
                 Text cropText = cropCount.AddComponent<Text>();
-                cropText.text = "x" + GameManager.Instance.CropCount[j];
+                cropText.text = "x" + GameManager.Instance.CropCount[i][j];
                 cropText.font = GameManager.Instance.mainFont;
                 cropText.fontSize = fontSize;
                 cropText.alignment = TextAnchor.MiddleCenter;

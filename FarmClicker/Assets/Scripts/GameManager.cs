@@ -38,13 +38,17 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        cropCount = new int[16];
+        // cropCount 는 카테고리가 2개, 16개의 작물이라고 가정
+        cropCount = new int[2][];
+
+        for (int i = 0; i < 2; i++)
+            cropCount[i] = new int[16];
         //cropCount = new int[crops[0].cropSprites.Length];
     }
 
     public Crop[] crops;
-    private int[] cropCount;
-    public int[] CropCount
+    private int[][] cropCount;
+    public int[][] CropCount
     {
         get { return cropCount; }
     }
@@ -52,6 +56,13 @@ public class GameManager : MonoBehaviour
     public enum plantName { };
 
     public Font mainFont;
+
+    private int category;
+    public int Category
+    {
+        get { return select; }
+        set { select = value; }
+    }
 
     private int select;
     public int Select
