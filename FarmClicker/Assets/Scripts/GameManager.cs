@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 2; i++)
             cropCount[i] = new int[16];
         //cropCount = new int[crops[0].cropSprites.Length];
+
+        category = 0;
     }
 
     public Crop[] crops;
@@ -60,8 +62,8 @@ public class GameManager : MonoBehaviour
     private int category;
     public int Category
     {
-        get { return select; }
-        set { select = value; }
+        get { return category; }
+        set { category = value; }
     }
 
     private int select;
