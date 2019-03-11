@@ -4004,6 +4004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743117948}
   - component: {fileID: 743117949}
+  - component: {fileID: 743117950}
   m_Layer: 5
   m_Name: VegetableSeed
   m_TagString: Untagged
@@ -4054,6 +4055,19 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &743117950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743117947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4748db7666b430840a40ce5c220d46b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropSeed: {fileID: 0}
 --- !u!1 &762998122
 GameObject:
   m_ObjectHideFlags: 0
@@ -4064,6 +4078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 762998123}
   - component: {fileID: 762998124}
+  - component: {fileID: 762998125}
   m_Layer: 5
   m_Name: FruitSeed
   m_TagString: Untagged
@@ -4114,6 +4129,19 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &762998125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762998122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4748db7666b430840a40ce5c220d46b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropSeed: {fileID: 0}
 --- !u!1 &764856829
 GameObject:
   m_ObjectHideFlags: 0

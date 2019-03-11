@@ -59,8 +59,8 @@ public class CreateSeed : MonoBehaviour
                 seedLayout.preferredHeight = seedSize;
 
                 // Add select vegetable script to seed
-                SelectVegetable sv = seed.AddComponent<SelectVegetable>();
-                sv.PlantIndex = j;
+                SelectCrop sc = seed.AddComponent<SelectCrop>();
+                sc.PlantIndex = j;
 
                 // Create seed image
                 GameObject seedImage = new GameObject("Image");

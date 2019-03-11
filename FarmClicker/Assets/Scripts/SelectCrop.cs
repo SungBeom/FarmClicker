@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectVegetable : MonoBehaviour
+public class SelectCrop : MonoBehaviour
 {
     private int plantIndex;
     public int PlantIndex
@@ -17,12 +17,19 @@ public class SelectVegetable : MonoBehaviour
         GetComponent<Image>().color = Color.grey;
     }
 
-    void ButtonClick()
+    // public 임시 추가
+    public void ButtonClick()
     {
         int temp = GameManager.Instance.Select;
         GameManager.Instance.Select = plantIndex;
 
         transform.parent.GetChild(temp).GetComponent<Image>().color = Color.grey;
         GetComponent<Image>().color = Color.white;
+    }
+
+    // 임시 추가
+    public void RemoveFocus()
+    {
+        GetComponent<Image>().color = Color.grey;
     }
 }
