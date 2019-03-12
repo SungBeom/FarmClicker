@@ -40,12 +40,16 @@ public class GameManager : MonoBehaviour
     {
         // cropCount 는 카테고리가 2개, 16개의 작물이라고 가정
         cropCount = new int[2][];
-
         for (int i = 0; i < 2; i++)
             cropCount[i] = new int[16];
         //cropCount = new int[crops[0].cropSprites.Length];
 
         category = 0;
+
+        // crop이 2개라 가정
+        select = new int[2];
+        for (int i = 0; i < 2; i++)
+            select[i] = 0;
     }
 
     public Crop[] crops;
@@ -66,8 +70,8 @@ public class GameManager : MonoBehaviour
         set { category = value; }
     }
 
-    private int select;
-    public int Select
+    private int[] select;
+    public int[] Select
     {
         get { return select; }
         set { select = value; }

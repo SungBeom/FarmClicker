@@ -46,7 +46,7 @@ public class GrowPlant : MonoBehaviour
     {
         growState = GrowState.Growing;
         category = GameManager.Instance.Category;
-        index = GameManager.Instance.Select;
+        index = GameManager.Instance.Select[category];
 
         vegetableImage.GetComponent<Image>().enabled = true;
         vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index];
