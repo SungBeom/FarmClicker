@@ -8701,39 +8701,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crops:
   - cropSprites:
-    - {fileID: 21300000, guid: 5d582b0c817d17e46a4374f4f239aba0, type: 3}
-    - {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
-    - {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
-    - {fileID: 21300000, guid: b09cb056b722c2b4cb5ddbdb29826b5b, type: 3}
-    - {fileID: 21300000, guid: 09d58eae71ba88946a36dbe1b2afa2df, type: 3}
-    - {fileID: 21300000, guid: aa6c1f3b1a2393f40bd686808ca24e4f, type: 3}
-    - {fileID: 21300000, guid: b8ac6d6655b5caa45b78afafb9510120, type: 3}
-    - {fileID: 21300000, guid: 4e3f30015074dc64db08df6d32153c30, type: 3}
-    - {fileID: 21300000, guid: dd8fb7a9ee1aaf1428d7cff0f951ea94, type: 3}
-    - {fileID: 21300000, guid: aa3bf8b39f5871146a53d7a5a9aa8c44, type: 3}
-    - {fileID: 21300000, guid: 75abe1d015350a349be5a798380619e4, type: 3}
-    - {fileID: 21300000, guid: ca695be938c650946aa61cdac4ffca7d, type: 3}
-    - {fileID: 21300000, guid: 81b74112d368d0e4e883da6b7ffa4618, type: 3}
-    - {fileID: 21300000, guid: a0b0804e9bc481f45bd5b195671f26e4, type: 3}
-    - {fileID: 21300000, guid: 3a79791a8605a4d40b0030a56d778502, type: 3}
-    - {fileID: 21300000, guid: 20766d1bfd4665744ae93351ff565a8c, type: 3}
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
   - cropSprites:
-    - {fileID: 21300000, guid: b90897fcd042361469da5be52af02c74, type: 3}
-    - {fileID: 21300000, guid: b791aeae04a4b6e46902c3ed636797cc, type: 3}
-    - {fileID: 21300000, guid: c8906106330eb3f46add0304dc63c048, type: 3}
-    - {fileID: 21300000, guid: 462d17f3e1d751a44bf383b6f6cf4455, type: 3}
-    - {fileID: 21300000, guid: 482d630aecbb13d43ad17ac0564e9697, type: 3}
-    - {fileID: 21300000, guid: 3943cdb71bc58984697f708f329292f5, type: 3}
-    - {fileID: 21300000, guid: a035da4ee7e05f44fa762e632dc17726, type: 3}
-    - {fileID: 21300000, guid: 911047ed15a8df94e862c330f07d18f8, type: 3}
-    - {fileID: 21300000, guid: 34265881d3375f04fad128b6e55fa685, type: 3}
-    - {fileID: 21300000, guid: d014d96703559634cb8b3b0b2e2a012d, type: 3}
-    - {fileID: 21300000, guid: 5b9ba92bfd5729045929350142015e04, type: 3}
-    - {fileID: 21300000, guid: ed3d8d52165db494f9dcda675824bf5a, type: 3}
-    - {fileID: 21300000, guid: ca9853e407f2e18449c633c3fd637e6d, type: 3}
-    - {fileID: 21300000, guid: 0c3662d411d76334aacbc954c32fd997, type: 3}
-    - {fileID: 21300000, guid: 17d40ae083822c041b87f5a4a103cb97, type: 3}
-    - {fileID: 21300000, guid: d41e63d779ab0d04ba3b5578fe9f3de7, type: 3}
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
+    - sprites: []
+      time: 0
   mainFont: {fileID: 12800000, guid: 37794d5987838bf4687617714e68a039, type: 3}
 --- !u!4 &1585099791
 Transform:
