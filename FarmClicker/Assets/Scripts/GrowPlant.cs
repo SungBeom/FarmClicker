@@ -49,7 +49,7 @@ public class GrowPlant : MonoBehaviour
         index = GameManager.Instance.Select[category];
 
         vegetableImage.GetComponent<Image>().enabled = true;
-        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].sprites[0];
+        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index];
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
 
@@ -64,7 +64,7 @@ public class GrowPlant : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
         }
         //수확 완료된 sprite 넣기(이차원 배열 사용)
-        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].sprites[0];
+        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index];
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
         test.text = "Test";//

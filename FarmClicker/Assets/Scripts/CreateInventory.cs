@@ -85,7 +85,7 @@ public class CreateInventory : MonoBehaviour
 
                 // Add image component to crop image
                 Image image = cropImage.AddComponent<Image>();
-                image.sprite = GameManager.Instance.crops[i].cropSprites[j].sprites[0];
+                image.sprite = GameManager.Instance.crops[i].cropSprites[j].Sprites[0];
                 //image.sprite = GameManager.Instance.crops[i].cropSprites[j];
                 //image.sprite = GameManager.Instance.plants[i];
                 image.preserveAspect = true;

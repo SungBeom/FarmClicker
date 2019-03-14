@@ -68,7 +68,7 @@ public class CreateSeed : MonoBehaviour
 
                 // Add image component to seed image
                 Image image = seedImage.AddComponent<Image>();
-                image.sprite = GameManager.Instance.crops[i].cropSprites[j].sprites[0];
+                image.sprite = GameManager.Instance.crops[i].cropSprites[j].Sprites[0];
                 //image.sprite = GameManager.Instance.crops[i].cropSprites[j];
                 // image.sprite = GameManager.Instance.plants[i];
                 image.preserveAspect = true;

@@ -93,9 +93,19 @@ public class GameManager : MonoBehaviour
     [System.Serializable]
     public class CropSprite
     {
-        // 크기를 2로 고정하는 방법을 연구해야 함, 프로퍼티로 만드는 것도 고려
-        public Sprite[] sprites = new Sprite[2];
-        public float time;
+        // 크기를 2로 고정하는 방법을 연구해야 함
+        [SerializeField]
+        private Sprite[] sprites = new Sprite[2];
+        public Sprite[] Sprites
+        {
+            get { return sprites; }
+        }
+        [SerializeField]
+        private float growTime;
+        public float GrowTime
+        {
+            get { return growTime; }
+        }
 
         public CropSprite()
         {
