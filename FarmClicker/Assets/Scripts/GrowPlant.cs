@@ -54,7 +54,7 @@ public class GrowPlant : MonoBehaviour
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
 
         test.text = "Grow\n";//
-        for (int i = 1; i < 5; i++)
+        for (int i = 1; i < GameManager.Instance.crops[category].cropSprites[index].GrowTime; i++)
         {
             test.text += ".";//
             // 크기가 커지는 방식
@@ -64,7 +64,7 @@ public class GrowPlant : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
         }
         //수확 완료된 sprite 넣기(이차원 배열 사용)
-        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
+        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index];
         //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
         test.text = "Test";//
