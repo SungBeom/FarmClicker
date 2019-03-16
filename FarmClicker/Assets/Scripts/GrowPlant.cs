@@ -8,6 +8,8 @@ public class GrowPlant : MonoBehaviour
     Transform vegetableImage;
     Text test;//
 
+    Transform inventory;
+
     int category;
     int index;
 
@@ -21,6 +23,8 @@ public class GrowPlant : MonoBehaviour
         vegetableImage = transform.Find("Image");
         vegetableImage.GetComponent<Image>().enabled = false;
         test = GetComponentInChildren<Text>();//
+
+        inventory = GameObject.Find("Canvas").transform.Find("InventoryView").Find("Viewport").Find("Content");
 
         growState = GrowState.CanGrow;
     }
@@ -38,6 +42,8 @@ public class GrowPlant : MonoBehaviour
             vegetableImage.GetComponent<Image>().enabled = false;
 
             GameManager.Instance.CropCount[category][index]++;
+            if (GameManager.Instance.InventoryFlag)
+                inventory.transform.GetChild(category).GetChild(index).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[category][index];
             growState = GrowState.CanGrow;
         }
     }
@@ -50,8 +56,6 @@ public class GrowPlant : MonoBehaviour
 
         vegetableImage.GetComponent<Image>().enabled = true;
         vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
-        //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index];
-        //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
 
         test.text = "Grow\n";//
         for (int i = 1; i < GameManager.Instance.crops[category].cropSprites[index].GrowTime; i++)
@@ -61,12 +65,10 @@ public class GrowPlant : MonoBehaviour
             vegetableImage.localScale += new Vector3(0.1f, 0.1f, 0.1f);
             vegetableImage.Translate(0.0f, 20f / Screen.height, 0.0f);
             //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(GameManager.Instance.growSpeed);
         }
         //수확 완료된 sprite 넣기(이차원 배열 사용)
         vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
-        //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index];
-        //vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.plants[index];
         test.text = "Test";//
 
         growState = GrowState.CanHarvest;

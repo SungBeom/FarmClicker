@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         get { return cropCount; }
     }
 
-    public enum plantName { };
+    public float growSpeed;
 
     public Font mainFont;
 
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
             get { return sprites; }
         }
         [SerializeField]
-        private float growTime;
+        private float growTime = 1.0f;
         public float GrowTime
         {
             get { return growTime; }
