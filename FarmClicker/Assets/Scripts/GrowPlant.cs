@@ -42,6 +42,12 @@ public class GrowPlant : MonoBehaviour
             vegetableImage.GetComponent<Image>().enabled = false;
 
             GameManager.Instance.CropCount[category][index]++;
+            // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
+            if (Random.Range(1, 100) / 100f < GameManager.Instance.LuckyRatio)
+            {
+                Debug.Log("대성공!");
+                GameManager.Instance.CropCount[category][index]++;
+            }
             if (GameManager.Instance.InventoryFlag)
                 inventory.transform.GetChild(category).GetChild(index).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[category][index];
             growState = GrowState.CanGrow;
@@ -65,7 +71,8 @@ public class GrowPlant : MonoBehaviour
             vegetableImage.localScale += new Vector3(0.1f, 0.1f, 0.1f);
             vegetableImage.Translate(0.0f, 20f / Screen.height, 0.0f);
             //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
-            yield return new WaitForSeconds(GameManager.Instance.growSpeed);
+            // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
+            yield return new WaitForSeconds(GameManager.Instance.GrowSpeed / GameManager.Instance.AccelerationRatio);
         }
         //수확 완료된 sprite 넣기(이차원 배열 사용)
         vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];

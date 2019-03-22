@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
             cropCount[i] = new int[16];
         //cropCount = new int[crops[0].cropSprites.Length];
 
+        growSpeed = 1.0f;
+        accelerationRatio = 1.0f;
+        luckyRatio = 0.01f;
+
         category = 0;
 
         // crop이 2개라 가정
@@ -59,7 +63,24 @@ public class GameManager : MonoBehaviour
         get { return cropCount; }
     }
 
-    public float growSpeed;
+    [SerializeField]
+    private float growSpeed;
+    public float GrowSpeed
+    {
+        get { return growSpeed; }
+    }
+    private float accelerationRatio;
+    public float AccelerationRatio
+    {
+        get { return accelerationRatio; }
+        set { accelerationRatio = value; }
+    }
+    private float luckyRatio;
+    public float LuckyRatio
+    {
+        get { return luckyRatio; }
+        set { luckyRatio = value; }
+    }
 
     public Font mainFont;
 
