@@ -10,11 +10,23 @@ public class SelectInventoryBtn : MonoBehaviour
     public int selected;
     int temp;
 
+    float width;
+    float height;
+
+    void Awake()
+    {
+        width = 1080f;
+        height = 192f;
+    }
+
     void Change()
     {
         seed.GetChild(temp).gameObject.SetActive(false);
         seed.GetChild(selected).gameObject.SetActive(true);
         temp = selected;
+
+        seed.GetComponent<RectTransform>().sizeDelta =
+            new Vector2(width, Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 2.0f) * height);
     }
 
     public void Select(int num)
