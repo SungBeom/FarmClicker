@@ -127,7 +127,8 @@ public class CreateInventory : MonoBehaviour
         }
 
         transform.GetComponent<RectTransform>().sizeDelta =
-            new Vector2(cellSize.x * 2, Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 2.0f) * cellSize.y);
+            new Vector2(transform.GetComponent<RectTransform>().sizeDelta.x,
+            Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 2.0f) * cellSize.y);
 
         GameManager.Instance.InventoryFlag = true;
     }

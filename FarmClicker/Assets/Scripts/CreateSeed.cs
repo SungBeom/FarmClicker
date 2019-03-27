@@ -84,5 +84,9 @@ public class CreateSeed : MonoBehaviour
                 seedImage.GetComponent<RectTransform>().sizeDelta = imageSize;
             }
         }
+
+        transform.GetComponent<RectTransform>().sizeDelta =
+            new Vector2(transform.GetComponent<RectTransform>().sizeDelta.x,
+            Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 4.0f) * (cellSize.y + tbPadding) + tbPadding);
     }
 }
