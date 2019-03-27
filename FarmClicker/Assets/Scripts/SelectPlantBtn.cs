@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectPlantBtn : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class SelectPlantBtn : MonoBehaviour
 
         rt.sizeDelta =
             new Vector2(rt.sizeDelta.x, Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 4.0f) * height + 48f);
+
+        transform.parent.GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
 
         GameManager.Instance.Category = selected;
     }

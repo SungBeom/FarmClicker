@@ -2833,7 +2833,7 @@ GameObject:
   - component: {fileID: 560057656}
   - component: {fileID: 560057659}
   m_Layer: 5
-  m_Name: PalntBtn
+  m_Name: PlantBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

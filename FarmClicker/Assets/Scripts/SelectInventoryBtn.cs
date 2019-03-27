@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectInventoryBtn : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class SelectInventoryBtn : MonoBehaviour
 
         rt.sizeDelta =
             new Vector2(rt.sizeDelta.x, Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 2.0f) * height);
+
+        transform.parent.GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
     }
 
     public void Select(int num)
