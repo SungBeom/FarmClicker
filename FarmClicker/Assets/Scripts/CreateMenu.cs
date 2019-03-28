@@ -49,8 +49,11 @@ public class CreateMenu : MonoBehaviour
             ingredient.layer = LayerMask.NameToLayer("UI");
 
             // Add image component to ingredient
+            //Image ingredientImage = ingredient.AddComponent<Image>();
+            //ingredientImage.sprite = ingredients[i].ingredientImage;
+            //ingredientImage.preserveAspect = true;
             Image ingredientImage = ingredient.AddComponent<Image>();
-            ingredientImage.sprite = ingredients[i].ingredientImage;
+            ingredientImage.sprite = GameManager.Instance.crops[ingredients[i].cropIndex].cropSprites[ingredients[i].ingredientIndex].Sprites[0];
             ingredientImage.preserveAspect = true;
 
             // Add layout element component to ingredient
@@ -120,7 +123,11 @@ public class CreateMenu : MonoBehaviour
     [System.Serializable]
     public class Ingredient
     {
-        public Sprite ingredientImage;
+        // public Sprite ingredientImage;
+        // enum으로 변경하여 inspector 뷰에서 선택할 수 있도록 변경
+        public int cropIndex;
+        // 범위 제한 방식 연구
+        public int ingredientIndex;
         public int ingredientCount;
     }
 }

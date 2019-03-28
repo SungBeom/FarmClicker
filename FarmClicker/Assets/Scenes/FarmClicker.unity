@@ -1716,7 +1716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &255263954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1751,9 +1751,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!114 &255263956
@@ -2492,7 +2494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &420582138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2527,9 +2529,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!114 &420582140
@@ -4621,11 +4625,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 3
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
-    ingredientCount: 1
-  addingFoodCount: 1
+  - cropIndex: 1
+    ingredientIndex: 5
+    ingredientCount: 3
+  addingFoodCount: 5
 --- !u!114 &797066456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5395,9 +5401,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: f74afa0b1d00fc8458845b364ff7fbc8, type: 3}
+  - cropIndex: 1
+    ingredientIndex: 0
     ingredientCount: 2
-  - ingredientImage: {fileID: 21300000, guid: c002fae844b951446aa4126953f14258, type: 3}
+  - cropIndex: 1
+    ingredientIndex: 1
     ingredientCount: 2
   addingFoodCount: 3
 --- !u!114 &980744560
@@ -6567,7 +6575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1225328892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6602,9 +6610,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!114 &1225328894
@@ -7730,9 +7740,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 1
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!1 &1442096634
@@ -8054,7 +8066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1506142357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8089,9 +8101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!114 &1506142359
@@ -9615,9 +9629,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 1
+    ingredientIndex: 2
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 1
+    ingredientIndex: 3
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!114 &1866582613
@@ -10803,11 +10819,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 2
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 3
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: 13223b97d3c2e64499fb73a784c52d96, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 4
     ingredientCount: 1
   addingFoodCount: 2
 --- !u!1 &2027314125
@@ -11565,7 +11584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2132830776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11600,9 +11619,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ingredientImage: {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
-  - ingredientImage: {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
+  - cropIndex: 0
+    ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
 --- !u!114 &2132830778
