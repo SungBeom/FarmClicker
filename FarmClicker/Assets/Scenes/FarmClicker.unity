@@ -1751,10 +1751,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
@@ -2529,10 +2529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
@@ -4625,10 +4625,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 3
     ingredientCount: 1
-  - cropIndex: 1
+  - ingredientCategory: 1
     ingredientIndex: 5
     ingredientCount: 3
   addingFoodCount: 5
@@ -5401,10 +5401,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 1
+  - ingredientCategory: 1
     ingredientIndex: 0
     ingredientCount: 2
-  - cropIndex: 1
+  - ingredientCategory: 1
     ingredientIndex: 1
     ingredientCount: 2
   addingFoodCount: 3
@@ -6610,10 +6610,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
@@ -7740,10 +7740,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 1
     ingredientCount: 1
   addingFoodCount: 1
@@ -8101,10 +8101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1
@@ -9629,10 +9629,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 1
+  - ingredientCategory: 1
     ingredientIndex: 2
     ingredientCount: 1
-  - cropIndex: 1
+  - ingredientCategory: 1
     ingredientIndex: 3
     ingredientCount: 1
   addingFoodCount: 1
@@ -10819,13 +10819,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 2
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 3
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 4
     ingredientCount: 1
   addingFoodCount: 2
@@ -11619,10 +11619,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
-  - cropIndex: 0
+  - ingredientCategory: 0
     ingredientIndex: 0
     ingredientCount: 1
   addingFoodCount: 1

@@ -21,6 +21,8 @@ public class CreateMenu : MonoBehaviour
     Vector3 foodCountPosition;
     Vector2 foodCountSize;
 
+    public enum IngredientCategory { Vegetable, Fruit };
+
     void Awake()
     {
         ingredientWidth = 150f;
@@ -53,7 +55,8 @@ public class CreateMenu : MonoBehaviour
             //ingredientImage.sprite = ingredients[i].ingredientImage;
             //ingredientImage.preserveAspect = true;
             Image ingredientImage = ingredient.AddComponent<Image>();
-            ingredientImage.sprite = GameManager.Instance.crops[ingredients[i].cropIndex].cropSprites[ingredients[i].ingredientIndex].Sprites[0];
+            ingredientImage.sprite = GameManager.Instance.
+                crops[(int)ingredients[i].ingredientCategory].cropSprites[ingredients[i].ingredientIndex].Sprites[0];
             ingredientImage.preserveAspect = true;
 
             // Add layout element component to ingredient
@@ -123,10 +126,9 @@ public class CreateMenu : MonoBehaviour
     [System.Serializable]
     public class Ingredient
     {
-        // public Sprite ingredientImage;
-        // enum으로 변경하여 inspector 뷰에서 선택할 수 있도록 변경
-        public int cropIndex;
-        // 범위 제한 방식 연구
+        public IngredientCategory ingredientCategory;
+        // 16개의 작물이라고 가정
+        [Range(0, 16)]
         public int ingredientIndex;
         public int ingredientCount;
     }
