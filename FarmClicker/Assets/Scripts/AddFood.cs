@@ -14,6 +14,10 @@ public class AddFood : MonoBehaviour
         set { addCount = value; }
     }
 
+    private Dictionary<int, int> ingredient;
+    //private List<int> category;
+    //private List<int> index;
+
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
@@ -30,5 +34,10 @@ public class AddFood : MonoBehaviour
         // Test용 코드
         GameManager.Instance.CropCount[0][0]--;
         GameManager.Instance.CropCount[0][1]--;
+    }
+
+    public void AddIngredient(int category, int index)
+    {
+        ingredient.Add(category, index);
     }
 }
