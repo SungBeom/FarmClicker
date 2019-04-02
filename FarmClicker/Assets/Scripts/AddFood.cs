@@ -14,30 +14,49 @@ public class AddFood : MonoBehaviour
         set { addCount = value; }
     }
 
-    private Dictionary<int, int> ingredient;
-    //private List<int> category;
-    //private List<int> index;
+    CreateMenu.Ingredient[] ingredients;
 
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
+
+        ingredients = transform.parent.gameObject.GetComponent<CreateMenu>().ingredients;
+        if (ingredients.Length > 5)
+            System.Array.Resize(ref ingredients, 5);
     }
 
     void ButtonClick()
     {
-        int count;
-        int.TryParse(foodCount.text.Substring(1), out count);
+        if (IsIngredientEnough())
+        {
+            int count;
+            int.TryParse(foodCount.text.Substring(1), out count);
 
-        count += addCount;
-        foodCount.text = "x" + count.ToString();
+            Cook();
 
-        // Test용 코드
-        GameManager.Instance.CropCount[0][0]--;
-        GameManager.Instance.CropCount[0][1]--;
+            count += addCount;
+            foodCount.text = "x" + count.ToString();
+        }
+        else
+        {
+            // 음식을 만들 수 없을 경우
+        }
     }
 
-    public void AddIngredient(int category, int index)
+    bool IsIngredientEnough()
     {
-        ingredient.Add(category, index);
+        for (int i = 0; i < ingredients.Length; i++)
+            if (GameManager.Instance.CropCount[(int)ingredients[i].ingredientCategory][ingredients[i].ingredientIndex]
+                < ingredients[i].ingredientCount)
+                return false;
+
+        return true;
+    }
+
+    void Cook()
+    {
+        for (int i = 0; i < ingredients.Length; i++)
+            GameManager.Instance.CropCount[(int)ingredients[i].ingredientCategory][ingredients[i].ingredientIndex]
+                -= ingredients[i].ingredientCount;
     }
 }

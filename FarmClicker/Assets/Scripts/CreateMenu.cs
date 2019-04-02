@@ -51,9 +51,6 @@ public class CreateMenu : MonoBehaviour
             ingredient.layer = LayerMask.NameToLayer("UI");
 
             // Add image component to ingredient
-            //Image ingredientImage = ingredient.AddComponent<Image>();
-            //ingredientImage.sprite = ingredients[i].ingredientImage;
-            //ingredientImage.preserveAspect = true;
             Image ingredientImage = ingredient.AddComponent<Image>();
             ingredientImage.sprite = GameManager.Instance.
                 crops[(int)ingredients[i].ingredientCategory].cropSprites[ingredients[i].ingredientIndex].Sprites[0];
@@ -108,6 +105,7 @@ public class CreateMenu : MonoBehaviour
         foodText.alignment = TextAnchor.MiddleCenter;
         foodText.color = Color.black;
 
+        // Function call in add food script
         foodCountHolder.GetComponent<AddFood>().AddCount = (addingFoodCount == 0 ? 1 : addingFoodCount);
 
         // Establish relationship between transforms
