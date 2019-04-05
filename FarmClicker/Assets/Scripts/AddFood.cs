@@ -34,6 +34,8 @@ public class AddFood : MonoBehaviour
 
             Cook();
 
+            // 대성공 넣기
+            // FoodCount를 올리는 부분도 Cook에 넣는 것 고려
             count += addCount;
             foodCount.text = "x" + count.ToString();
         }
