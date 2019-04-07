@@ -43,9 +43,9 @@ public class GrowPlant : MonoBehaviour
 
             GameManager.Instance.CropCount[category][index]++;
             // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
-            if (Random.Range(1, 100) / 100f < GameManager.Instance.LuckyRatio)
+            if (Random.Range(1, 100) / 100f < GameManager.Instance.HarvestRatio)
             {
-                Debug.Log("대성공!");
+                Debug.Log("수확 대성공!");
                 GameManager.Instance.CropCount[category][index]++;
             }
             if (GameManager.Instance.InventoryFlag)
@@ -74,7 +74,6 @@ public class GrowPlant : MonoBehaviour
             // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
             yield return new WaitForSeconds(GameManager.Instance.GrowSpeed / GameManager.Instance.AccelerationRatio);
         }
-        //수확 완료된 sprite 넣기(이차원 배열 사용)
         vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
         test.text = "Test";//
 

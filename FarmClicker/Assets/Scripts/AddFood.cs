@@ -34,9 +34,13 @@ public class AddFood : MonoBehaviour
 
             Cook();
 
-            // 대성공 넣기
-            // FoodCount를 올리는 부분도 Cook에 넣는 것 고려
             count += addCount;
+            // 일정 확률로 대성공(고기가 2배로 얻어짐)
+            if (Random.Range(1, 100) / 100f < GameManager.Instance.CookRatio)
+            {
+                Debug.Log("요리 대성공!");
+                count += addCount;
+            }
             foodCount.text = "x" + count.ToString();
         }
         else

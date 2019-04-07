@@ -46,7 +46,8 @@ public class GameManager : MonoBehaviour
 
         growSpeed = 1.0f;
         accelerationRatio = 1.0f;
-        luckyRatio = 0.01f;
+        harvestRatio = 0.01f;
+        cookRatio = 0.1f;
 
         category = 0;
 
@@ -75,11 +76,17 @@ public class GameManager : MonoBehaviour
         get { return accelerationRatio; }
         set { accelerationRatio = value; }
     }
-    private float luckyRatio;
-    public float LuckyRatio
+    private float harvestRatio;
+    public float HarvestRatio
     {
-        get { return luckyRatio; }
-        set { luckyRatio = value; }
+        get { return harvestRatio; }
+        set { harvestRatio = value; }
+    }
+    private float cookRatio;
+    public float CookRatio
+    {
+        get { return cookRatio; }
+        set { cookRatio = value; }
     }
 
     public Font mainFont;
