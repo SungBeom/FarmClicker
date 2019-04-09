@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GrowPlant : MonoBehaviour
 {
+    Transform[] plantImage;
     Transform vegetableImage;
     Text test;//
 
@@ -20,7 +21,14 @@ public class GrowPlant : MonoBehaviour
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
 
-        vegetableImage = transform.Find("Image");
+        plantImage = new Transform[2];
+        plantImage[0] = transform.Find("VegetableImage");
+        plantImage[1] = transform.Find("FruitImage");
+        plantImage[0].GetComponent<Image>().enabled = false;
+        plantImage[1].GetComponent<Image>().enabled = false;
+
+        vegetableImage = transform.Find("VegetableImage");
+        //vegetableImage = transform.Find("Image");
         vegetableImage.GetComponent<Image>().enabled = false;
         test = GetComponentInChildren<Text>();//
 
