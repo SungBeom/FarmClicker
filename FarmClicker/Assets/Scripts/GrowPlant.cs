@@ -42,6 +42,7 @@ public class GrowPlant : MonoBehaviour
         if (growState == GrowState.CanGrow) StartCoroutine("Growing");
         else if (growState == GrowState.CanHarvest)
         {
+            // 현재 vegetableImage -> plantImage로 변경해야 함
             vegetableImage.GetComponent<Image>().sprite = null;
             vegetableImage.localScale = Vector3.one;
             vegetableImage.transform.position =
@@ -68,21 +69,21 @@ public class GrowPlant : MonoBehaviour
         category = GameManager.Instance.Category;
         index = GameManager.Instance.Select[category];
 
-        vegetableImage.GetComponent<Image>().enabled = true;
-        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
+        plantImage[category].GetComponent<Image>().enabled = true;
+        plantImage[category].GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
 
         test.text = "Grow\n";//
         for (int i = 1; i < GameManager.Instance.crops[category].cropSprites[index].GrowTime; i++)
         {
             test.text += ".";//
             // 크기가 커지는 방식
-            vegetableImage.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-            vegetableImage.Translate(0.0f, 20f / Screen.height, 0.0f);
+            plantImage[category].localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            plantImage[category].Translate(0.0f, 20f / Screen.height, 0.0f);
             //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
             // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
             yield return new WaitForSeconds(GameManager.Instance.GrowSpeed / GameManager.Instance.AccelerationRatio);
         }
-        vegetableImage.GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
+        plantImage[category].GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
         test.text = "Test";//
 
         growState = GrowState.CanHarvest;
