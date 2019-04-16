@@ -15,7 +15,7 @@ public class GrowPlant : MonoBehaviour
     int index;
 
     enum GrowState { CanGrow, Growing, CanHarvest };
-    GrowState growState;
+    GrowState[] growState;
 
     void Start()
     {
@@ -34,13 +34,18 @@ public class GrowPlant : MonoBehaviour
 
         inventory = GameObject.Find("Canvas").transform.Find("InventoryView").Find("Viewport").Find("Content");
 
-        growState = GrowState.CanGrow;
+        growState = new GrowState[2];
+        growState[0] = GrowState.CanGrow;
+        growState[1] = GrowState.CanGrow;
     }
 
     void ButtonClick()
     {
-        if (growState == GrowState.CanGrow) StartCoroutine("Growing");
-        else if (growState == GrowState.CanHarvest)
+        // 현재 실제 카테고리를 변경하고 클릭해도 이전 카테고리가 유지되는 방식
+        Debug.Log(category);
+
+        if (growState[category] == GrowState.CanGrow) StartCoroutine("Growing");
+        else if (growState[category] == GrowState.CanHarvest)
         {
             // 현재 vegetableImage -> plantImage로 변경해야 함
             vegetableImage.GetComponent<Image>().sprite = null;
@@ -59,15 +64,15 @@ public class GrowPlant : MonoBehaviour
             }
             if (GameManager.Instance.InventoryFlag)
                 inventory.transform.GetChild(category).GetChild(index).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[category][index];
-            growState = GrowState.CanGrow;
+            growState[category] = GrowState.CanGrow;
         }
     }
 
     IEnumerator Growing()
     {
-        growState = GrowState.Growing;
         category = GameManager.Instance.Category;
         index = GameManager.Instance.Select[category];
+        growState[category] = GrowState.Growing;
 
         plantImage[category].GetComponent<Image>().enabled = true;
         plantImage[category].GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
@@ -86,6 +91,6 @@ public class GrowPlant : MonoBehaviour
         plantImage[category].GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
         test.text = "Test";//
 
-        growState = GrowState.CanHarvest;
+        growState[category] = GrowState.CanHarvest;
     }
 }
