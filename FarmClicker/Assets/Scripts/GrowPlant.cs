@@ -47,13 +47,12 @@ public class GrowPlant : MonoBehaviour
         if (growState[category] == GrowState.CanGrow) StartCoroutine("Growing");
         else if (growState[category] == GrowState.CanHarvest)
         {
-            // 현재 vegetableImage -> plantImage로 변경해야 함
-            vegetableImage.GetComponent<Image>().sprite = null;
-            vegetableImage.localScale = Vector3.one;
-            vegetableImage.transform.position =
-                new Vector3(vegetableImage.transform.position.x, 1.1458333333f, vegetableImage.transform.position.z);
+            plantImage[category].GetComponent<Image>().sprite = null;
+            plantImage[category].localScale = Vector3.one;
+            plantImage[category].transform.position =
+                new Vector3(plantImage[category].transform.position.x, 1.1458333333f, plantImage[category].transform.position.z);
             //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
-            vegetableImage.GetComponent<Image>().enabled = false;
+            plantImage[category].GetComponent<Image>().enabled = false;
 
             GameManager.Instance.CropCount[category][index]++;
             // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
