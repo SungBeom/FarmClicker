@@ -6,13 +6,12 @@ using UnityEngine.UI;
 public class GrowPlant : MonoBehaviour
 {
     Transform[] plantImage;
-    Transform vegetableImage;
     Text test;//
 
     Transform inventory;
 
     int category;
-    int index;
+    int[] index;
 
     enum GrowState { CanGrow, Growing, CanHarvest };
     GrowState[] growState;
@@ -27,12 +26,11 @@ public class GrowPlant : MonoBehaviour
         plantImage[0].GetComponent<Image>().enabled = false;
         plantImage[1].GetComponent<Image>().enabled = false;
 
-        vegetableImage = transform.Find("VegetableImage");
-        //vegetableImage = transform.Find("Image");
-        vegetableImage.GetComponent<Image>().enabled = false;
         test = GetComponentInChildren<Text>();//
 
         inventory = GameObject.Find("Canvas").transform.Find("InventoryView").Find("Viewport").Find("Content");
+
+        index = new int[2];
 
         growState = new GrowState[2];
         growState[0] = GrowState.CanGrow;
@@ -41,55 +39,61 @@ public class GrowPlant : MonoBehaviour
 
     void ButtonClick()
     {
-        // 현재 실제 카테고리를 변경하고 클릭해도 이전 카테고리가 유지되는 방식
-        Debug.Log(category);
+        category = GameManager.Instance.Category;
 
-        if (growState[category] == GrowState.CanGrow) StartCoroutine("Growing");
-        else if (growState[category] == GrowState.CanHarvest)
+        //  GrowState가 CanGrow상태일 때, Growing Coroutine 호출
+        if (growState[category] == GrowState.CanGrow) StartCoroutine("Growing", category);
+
+        // CanHarvest인 것을 전부 검사
+        // CanGrow 상태라면 호출하지 않아도 됨 -> 개선 여지 있음
+        for (int i = 0; i < plantImage.Length; i++)
         {
-            plantImage[category].GetComponent<Image>().sprite = null;
-            plantImage[category].localScale = Vector3.one;
-            plantImage[category].transform.position =
-                new Vector3(plantImage[category].transform.position.x, 1.1458333333f, plantImage[category].transform.position.z);
-            //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
-            plantImage[category].GetComponent<Image>().enabled = false;
-
-            GameManager.Instance.CropCount[category][index]++;
-            // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
-            if (Random.Range(1, 100) / 100f < GameManager.Instance.HarvestRatio)
+            if (growState[i] == GrowState.CanHarvest)
             {
-                Debug.Log("수확 대성공!");
-                GameManager.Instance.CropCount[category][index]++;
+                plantImage[i].GetComponent<Image>().sprite = null;
+                plantImage[i].localScale = Vector3.one;
+                plantImage[i].transform.position =
+                    new Vector3(plantImage[i].transform.position.x, 1.1458333333f, plantImage[i].transform.position.z);
+                //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
+                plantImage[i].GetComponent<Image>().enabled = false;
+
+                GameManager.Instance.CropCount[i][index[i]]++;
+                // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
+                if (Random.Range(1, 100) / 100f < GameManager.Instance.HarvestRatio)
+                {
+                    Debug.Log("수확 대성공!");
+                    GameManager.Instance.CropCount[i][index[i]]++;
+                }
+                if (GameManager.Instance.InventoryFlag)
+                    inventory.transform.GetChild(i).GetChild(index[i]).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[i][index[i]];
+                growState[i] = GrowState.CanGrow;
             }
-            if (GameManager.Instance.InventoryFlag)
-                inventory.transform.GetChild(category).GetChild(index).GetComponentInChildren<Text>().text = "x" + GameManager.Instance.CropCount[category][index];
-            growState[category] = GrowState.CanGrow;
         }
     }
 
-    IEnumerator Growing()
+    IEnumerator Growing(int category)
     {
-        category = GameManager.Instance.Category;
-        index = GameManager.Instance.Select[category];
         growState[category] = GrowState.Growing;
+        int growingCategory = category;
+        index[growingCategory] = GameManager.Instance.Select[growingCategory];
 
-        plantImage[category].GetComponent<Image>().enabled = true;
-        plantImage[category].GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[0];
+        plantImage[growingCategory].GetComponent<Image>().enabled = true;
+        plantImage[growingCategory].GetComponent<Image>().sprite = GameManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[0];
 
         test.text = "Grow\n";//
-        for (int i = 1; i < GameManager.Instance.crops[category].cropSprites[index].GrowTime; i++)
+        for (int i = 1; i < GameManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].GrowTime; i++)
         {
             test.text += ".";//
             // 크기가 커지는 방식
-            plantImage[category].localScale += new Vector3(0.1f, 0.1f, 0.1f);
-            plantImage[category].Translate(0.0f, 20f / Screen.height, 0.0f);
+            plantImage[growingCategory].localScale += new Vector3(0.1f, 0.1f, 0.1f);
+            plantImage[growingCategory].Translate(0.0f, 20f / Screen.height, 0.0f);
             //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
             // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
             yield return new WaitForSeconds(GameManager.Instance.GrowSpeed / GameManager.Instance.AccelerationRatio);
         }
-        plantImage[category].GetComponent<Image>().sprite = GameManager.Instance.crops[category].cropSprites[index].Sprites[1];
+        plantImage[growingCategory].GetComponent<Image>().sprite = GameManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
         test.text = "Test";//
 
-        growState[category] = GrowState.CanHarvest;
+        growState[growingCategory] = GrowState.CanHarvest;
     }
 }
