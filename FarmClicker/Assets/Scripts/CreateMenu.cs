@@ -21,6 +21,7 @@ public class CreateMenu : MonoBehaviour
     Vector3 foodCountPosition;
     Vector2 foodCountSize;
 
+    // GameManager에서 관리하는 것이 더 나아보임
     public enum IngredientCategory { Vegetable, Fruit };
 
     void Awake()

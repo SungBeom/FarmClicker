@@ -38,23 +38,27 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // cropCount 는 카테고리가 2개, 16개의 작물이라고 가정
-        cropCount = new int[2][];
+        // cropCount 는 카테고리가 2개, 16개의 작물
+        cropCount = new int[crops.Length][];
         for (int i = 0; i < 2; i++)
-            cropCount[i] = new int[16];
-        //cropCount = new int[crops[0].cropSprites.Length];
+            cropCount[i] = new int[crops[i].cropSprites.Length];
+
+        // foodCount, goldAmount를 전체 GM에서 받아옴
+
+        // automaticFoodCount는 전체 GM에 있거나, 전체 GM에서 받아오는 구도
+        automaticFoodCount = 3;//
 
         growSpeed = 1.0f;
         accelerationRatio = 1.0f;
         harvestRatio = 0.01f;
         cookRatio = 0.1f;
 
-        category = 0;
-
-        // crop이 2개라 가정
-        select = new int[2];
-        for (int i = 0; i < 2; i++)
+        // crop이 2개
+        select = new int[crops.Length];
+        for (int i = 0; i < select.Length; i++)
             select[i] = 0;
+
+        StartCoroutine("AutomaticFarming");
     }
 
     public Crop[] crops;
@@ -64,12 +68,29 @@ public class GameManager : MonoBehaviour
         get { return cropCount; }
     }
 
+    private ulong foodCount;
+    public ulong FoodCount
+    {
+        get { return foodCount; }
+        set { foodCount = value; }
+    }
+
+    private ulong goldAmount;
+    public ulong GoldAmount
+    {
+        get { return goldAmount; }
+        set { goldAmount = value; }
+    }
+
+    int automaticFoodCount;
+
     [SerializeField]
     private float growSpeed;
     public float GrowSpeed
     {
         get { return growSpeed; }
     }
+    public float foodGenerationCycle = 10f;
     private float accelerationRatio;
     public float AccelerationRatio
     {
@@ -110,6 +131,24 @@ public class GameManager : MonoBehaviour
     {
         get { return inventoryFlag; }
         set { inventoryFlag = value; }
+    }
+
+    // test를 위한 코드, 실제 뷰로 대체하거나 구조 변경 요망
+    public Text foodText;
+
+    IEnumerator AutomaticFarming()
+    {
+        int count;
+
+        while (true)
+        {
+            yield return new WaitForSeconds(foodGenerationCycle);
+
+            // 현재 요리와 연동되어 있지 않음
+            int.TryParse(foodText.text.Substring(1), out count);
+            foodCount += (ulong)(automaticFoodCount);
+            foodText.text = "x" + foodCount.ToString();
+        }
     }
 
     [System.Serializable]

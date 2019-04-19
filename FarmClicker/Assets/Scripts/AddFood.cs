@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class AddFood : MonoBehaviour
 {
+    // 실제 뷰를 가져와 뷰를 바꾸며 실제 데이터를 변경하는 방식
+    // 실제 데이터를 변경하고 변경이 될 때, 뷰를 업데이트 하는 방식으로 변경해도 괜찮음
     public Text foodCount;
 
     private int addCount;
