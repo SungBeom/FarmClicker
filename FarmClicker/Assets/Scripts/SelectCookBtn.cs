@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectInventoryBtn : MonoBehaviour
+public class SelectCookBtn : MonoBehaviour
 {
     public Transform content;
 
@@ -14,10 +14,19 @@ public class SelectInventoryBtn : MonoBehaviour
     RectTransform rt;
     float height;
 
+    int[] recipeCount;
+
     void Awake()
     {
         rt = content.GetComponent<RectTransform>();
         height = 192f;
+
+        recipeCount = new int[2];
+        recipeCount[0] = rt.GetChild(0).childCount;
+        recipeCount[1] = rt.GetChild(1).childCount;
+
+        rt.sizeDelta =
+            new Vector2(rt.sizeDelta.x, recipeCount[0] * height);
     }
 
     void Change()
@@ -27,7 +36,7 @@ public class SelectInventoryBtn : MonoBehaviour
         temp = selected;
 
         rt.sizeDelta =
-            new Vector2(rt.sizeDelta.x, Mathf.Round((GameManager.Instance.crops[selected].cropSprites.Length + 0.5f) / 2.0f) * height);
+            new Vector2(rt.sizeDelta.x, recipeCount[selected] * height);
 
         transform.parent.GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
     }

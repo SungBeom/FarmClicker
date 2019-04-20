@@ -22,6 +22,7 @@ public class CreateInventory : MonoBehaviour
 
     void Awake()
     {
+        // 버튼이 총 2개
         cropInventory = new GameObject[2];
         cropInventory[0] = transform.Find("VegetableInventory").gameObject;
         cropInventory[1] = transform.Find("FruitInventory").gameObject;
@@ -65,7 +66,7 @@ public class CreateInventory : MonoBehaviour
 
         for (int i = 0; i < GameManager.Instance.crops.Length; i++)
         {
-            for (int j = 0; j < GameManager.Instance.crops[0].cropSprites.Length; j++)
+            for (int j = 0; j < GameManager.Instance.crops[i].cropSprites.Length; j++)
             {
                 // Create crop
                 GameObject crop = new GameObject("Crop" + (j + 1));
@@ -126,6 +127,7 @@ public class CreateInventory : MonoBehaviour
             }
         }
 
+        // 초기에 채소가 보여지므로, 채소의 개수에 맞게 viewport의 content 크기 초기화
         transform.GetComponent<RectTransform>().sizeDelta =
             new Vector2(transform.GetComponent<RectTransform>().sizeDelta.x,
             Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 2.0f) * cellSize.y);

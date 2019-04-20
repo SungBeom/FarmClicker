@@ -15,6 +15,7 @@ public class CreateSeed : MonoBehaviour
 
     void Awake()
     {
+        // 버튼이 총 2개
         cropSeed = new GameObject[2];
         cropSeed[0] = transform.Find("VegetableSeed").gameObject;
         cropSeed[1] = transform.Find("FruitSeed").gameObject;
@@ -85,6 +86,7 @@ public class CreateSeed : MonoBehaviour
             }
         }
 
+        // 초기에 채소가 보여지므로, 채소의 개수에 맞게 viewport의 content 크기 초기화
         transform.GetComponent<RectTransform>().sizeDelta =
             new Vector2(transform.GetComponent<RectTransform>().sizeDelta.x,
             Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 4.0f) * (cellSize.y + tbPadding) + tbPadding);
