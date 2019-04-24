@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         // foodCount, goldAmount를 전체 GM에서 받아옴
 
         // automaticFoodCount는 전체 GM에 있거나, 전체 GM에서 받아오는 구도
-        automaticFoodCount = 3;//
 
         growSpeed = 1.0f;
         accelerationRatio = 1.0f;
@@ -82,15 +81,12 @@ public class GameManager : MonoBehaviour
         set { goldAmount = value; }
     }
 
-    int automaticFoodCount;
-
     [SerializeField]
     private float growSpeed;
     public float GrowSpeed
     {
         get { return growSpeed; }
     }
-    public float foodGenerationCycle = 10f;
     private float accelerationRatio;
     public float AccelerationRatio
     {
@@ -109,6 +105,9 @@ public class GameManager : MonoBehaviour
         get { return cookRatio; }
         set { cookRatio = value; }
     }
+
+    public int automaticFoodCount = 1;
+    public float foodGenerationCycle = 10f;
 
     public Font mainFont;
 
@@ -144,7 +143,6 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(foodGenerationCycle);
 
-            // 현재 요리와 연동되어 있지 않음
             int.TryParse(foodText.text.Substring(1), out count);
             foodCount += (ulong)(automaticFoodCount);
             foodText.text = "x" + foodCount.ToString();
