@@ -27,11 +27,11 @@ public class SelectPlantBtn : MonoBehaviour
         temp = selected;
 
         rt.sizeDelta =
-            new Vector2(rt.sizeDelta.x, Mathf.Round((GameManager.Instance.crops[selected].cropSprites.Length + 0.5f) / 4.0f) * height + 48f);
+            new Vector2(rt.sizeDelta.x, Mathf.Round((FarmManager.Instance.crops[selected].cropSprites.Length + 0.5f) / 4.0f) * height + 48f);
 
         transform.parent.GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
 
-        GameManager.Instance.Category = selected;
+        FarmManager.Instance.Category = selected;
     }
 
     public void Select(int num)

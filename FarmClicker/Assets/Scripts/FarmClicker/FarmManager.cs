@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class FarmManager : MonoBehaviour
 {
-    private static GameManager instance;
-    public static GameManager Instance
+    private static FarmManager instance;
+    public static FarmManager Instance
     {
         get { return instance; }
     }

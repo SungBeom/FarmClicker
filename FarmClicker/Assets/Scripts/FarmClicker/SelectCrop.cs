@@ -14,15 +14,15 @@ public class SelectCrop : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClick);
-        if (plantIndex != GameManager.Instance.Select[GameManager.Instance.Category])
+        if (plantIndex != FarmManager.Instance.Select[FarmManager.Instance.Category])
             GetComponent<Image>().color = Color.grey;
     }
 
     // public 임시 추가
     public void ButtonClick()
     {
-        int temp = GameManager.Instance.Select[GameManager.Instance.Category];
-        GameManager.Instance.Select[GameManager.Instance.Category] = plantIndex;
+        int temp = FarmManager.Instance.Select[FarmManager.Instance.Category];
+        FarmManager.Instance.Select[FarmManager.Instance.Category] = plantIndex;
 
         transform.parent.GetChild(temp).GetComponent<Image>().color = Color.grey;
         GetComponent<Image>().color = Color.white;

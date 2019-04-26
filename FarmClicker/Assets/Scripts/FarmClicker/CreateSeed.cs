@@ -32,7 +32,7 @@ public class CreateSeed : MonoBehaviour
     void Start()
     {
         // Fix grid layout group component to crop seed
-        for (int i = 0; i < GameManager.Instance.crops.Length; i++)
+        for (int i = 0; i < FarmManager.Instance.crops.Length; i++)
         {
             GridLayoutGroup sLayout = cropSeed[i].GetComponent<GridLayoutGroup>();
             sLayout.padding = new RectOffset(lrPadding, lrPadding, tbPadding, tbPadding);
@@ -40,9 +40,9 @@ public class CreateSeed : MonoBehaviour
             sLayout.spacing = spacing;
         }
 
-        for (int i = 0; i < GameManager.Instance.crops.Length; i++)
+        for (int i = 0; i < FarmManager.Instance.crops.Length; i++)
         {
-            for (int j = 0; j < GameManager.Instance.crops[i].cropSprites.Length; j++)
+            for (int j = 0; j < FarmManager.Instance.crops[i].cropSprites.Length; j++)
             {
                 // Create seed
                 GameObject seed = new GameObject("SeedBtn" + (j + 1));
@@ -69,9 +69,9 @@ public class CreateSeed : MonoBehaviour
 
                 // Add image component to seed image
                 Image image = seedImage.AddComponent<Image>();
-                image.sprite = GameManager.Instance.crops[i].cropSprites[j].Sprites[0];
-                //image.sprite = GameManager.Instance.crops[i].cropSprites[j];
-                // image.sprite = GameManager.Instance.plants[i];
+                image.sprite = FarmManager.Instance.crops[i].cropSprites[j].Sprites[0];
+                //image.sprite = FarmManager.Instance.crops[i].cropSprites[j];
+                // image.sprite = FarmManager.Instance.plants[i];
                 image.preserveAspect = true;
 
                 // Establish relationship between transforms
@@ -89,6 +89,6 @@ public class CreateSeed : MonoBehaviour
         // 초기에 채소가 보여지므로, 채소의 개수에 맞게 viewport의 content 크기 초기화
         transform.GetComponent<RectTransform>().sizeDelta =
             new Vector2(transform.GetComponent<RectTransform>().sizeDelta.x,
-            Mathf.Round((GameManager.Instance.crops[0].cropSprites.Length + 0.5f) / 4.0f) * (cellSize.y + tbPadding) + tbPadding);
+            Mathf.Round((FarmManager.Instance.crops[0].cropSprites.Length + 0.5f) / 4.0f) * (cellSize.y + tbPadding) + tbPadding);
     }
 }

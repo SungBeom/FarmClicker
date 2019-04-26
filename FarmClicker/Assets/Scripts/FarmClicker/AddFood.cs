@@ -37,13 +37,13 @@ public class AddFood : MonoBehaviour
             Cook();
 
             count += addCount;
-            GameManager.Instance.FoodCount = (ulong)count;
+            FarmManager.Instance.FoodCount = (ulong)count;
             // 일정 확률로 대성공(고기가 2배로 얻어짐)
-            if (Random.Range(1, 100) / 100f < GameManager.Instance.CookRatio)
+            if (Random.Range(1, 100) / 100f < FarmManager.Instance.CookRatio)
             {
                 Debug.Log("요리 대성공!");
                 count += addCount;
-                GameManager.Instance.FoodCount = (ulong)count;
+                FarmManager.Instance.FoodCount = (ulong)count;
             }
             foodCount.text = "x" + count.ToString();
         }
@@ -56,7 +56,7 @@ public class AddFood : MonoBehaviour
     bool IsIngredientEnough()
     {
         for (int i = 0; i < ingredients.Length; i++)
-            if (GameManager.Instance.CropCount[(int)ingredients[i].ingredientCategory][ingredients[i].ingredientIndex]
+            if (FarmManager.Instance.CropCount[(int)ingredients[i].ingredientCategory][ingredients[i].ingredientIndex]
                 < ingredients[i].ingredientCount)
                 return false;
 
@@ -66,7 +66,7 @@ public class AddFood : MonoBehaviour
     void Cook()
     {
         for (int i = 0; i < ingredients.Length; i++)
-            GameManager.Instance.CropCount[(int)ingredients[i].ingredientCategory][ingredients[i].ingredientIndex]
+            FarmManager.Instance.CropCount[(int)ingredients[i].ingredientCategory][ingredients[i].ingredientIndex]
                 -= ingredients[i].ingredientCount;
     }
 }

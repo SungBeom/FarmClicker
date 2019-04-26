@@ -27,7 +27,7 @@ public class SelectInventoryBtn : MonoBehaviour
         temp = selected;
 
         rt.sizeDelta =
-            new Vector2(rt.sizeDelta.x, Mathf.Round((GameManager.Instance.crops[selected].cropSprites.Length + 0.5f) / 2.0f) * height);
+            new Vector2(rt.sizeDelta.x, Mathf.Round((FarmManager.Instance.crops[selected].cropSprites.Length + 0.5f) / 2.0f) * height);
 
         transform.parent.GetComponent<ScrollRect>().verticalNormalizedPosition = 1f;
     }

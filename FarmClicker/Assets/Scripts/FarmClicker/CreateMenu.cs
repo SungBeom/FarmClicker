@@ -21,7 +21,7 @@ public class CreateMenu : MonoBehaviour
     Vector3 foodCountPosition;
     Vector2 foodCountSize;
 
-    // GameManager에서 관리하는 것이 더 나아보임
+    // FarmManager에서 관리하는 것이 더 나아보임
     public enum IngredientCategory { Vegetable, Fruit };
 
     void Awake()
@@ -53,7 +53,7 @@ public class CreateMenu : MonoBehaviour
 
             // Add image component to ingredient
             Image ingredientImage = ingredient.AddComponent<Image>();
-            ingredientImage.sprite = GameManager.Instance.
+            ingredientImage.sprite = FarmManager.Instance.
                 crops[(int)ingredients[i].ingredientCategory].cropSprites[ingredients[i].ingredientIndex].Sprites[0];
             ingredientImage.preserveAspect = true;
 
@@ -69,7 +69,7 @@ public class CreateMenu : MonoBehaviour
             // Add text component to ingredient count
             Text ingredientText = ingredientCount.AddComponent<Text>();
             ingredientText.text = "x" + (ingredients[i].ingredientCount == 0 ? 1 : ingredients[i].ingredientCount);
-            ingredientText.font = GameManager.Instance.mainFont;
+            ingredientText.font = FarmManager.Instance.mainFont;
             ingredientText.fontSize = fontSize;
             ingredientText.alignment = TextAnchor.MiddleCenter;
             ingredientText.color = Color.black;
@@ -101,7 +101,7 @@ public class CreateMenu : MonoBehaviour
         // Add text component to food count
         Text foodText = foodCount.AddComponent<Text>();
         foodText.text = "x" + (addingFoodCount == 0 ? 1 : addingFoodCount);
-        foodText.font = GameManager.Instance.mainFont;
+        foodText.font = FarmManager.Instance.mainFont;
         foodText.fontSize = fontSize;
         foodText.alignment = TextAnchor.MiddleCenter;
         foodText.color = Color.black;
