@@ -11,7 +11,11 @@ public class CreateSeed : MonoBehaviour
     Vector2 cellSize, spacing;
 
     float seedSize;
-    Vector2 imageSize;
+
+    int fontSize;
+
+    Vector2 siAnchorMin;
+    Vector2 spAnchorMax;
 
     void Awake()
     {
@@ -26,7 +30,11 @@ public class CreateSeed : MonoBehaviour
         spacing = new Vector2(lrPadding, tbPadding);
 
         seedSize = 200f;
-        imageSize = new Vector2(seedSize, seedSize);
+
+        fontSize = 40;
+
+        siAnchorMin = new Vector2(0f, 0.2f);
+        spAnchorMax = new Vector2(1f, 0.2f);
     }
 
     void Start()
@@ -70,19 +78,39 @@ public class CreateSeed : MonoBehaviour
                 // Add image component to seed image
                 Image image = seedImage.AddComponent<Image>();
                 image.sprite = FarmManager.Instance.crops[i].cropSprites[j].Sprites[0];
-                //image.sprite = FarmManager.Instance.crops[i].cropSprites[j];
-                // image.sprite = FarmManager.Instance.plants[i];
                 image.preserveAspect = true;
 
+                // Create seed price
+                GameObject seedPrice = new GameObject("Price");
+                seedPrice.layer = LayerMask.NameToLayer("UI");
+
+                // Add text component to seed price
+                Text text = seedPrice.AddComponent<Text>();
+                text.text = "x" + FarmManager.Instance.CropCount[i][j];
+                text.font = FarmManager.Instance.mainFont;
+                text.fontSize = fontSize;
+                text.alignment = TextAnchor.MiddleCenter;
+                text.color = Color.black;
+
                 // Establish relationship between transforms
-                image.transform.SetParent(seed.transform, false);
+                seedImage.transform.SetParent(seed.transform, false);
+                seedPrice.transform.SetParent(seed.transform, false);
                 seed.transform.SetParent(cropSeed[i].transform, false);
 
                 // Adjust seed transform
                 seed.transform.localScale = Vector3.one;
 
                 // Adjust seed image transform
-                seedImage.GetComponent<RectTransform>().sizeDelta = imageSize;
+                RectTransform sirt = seedImage.GetComponent<RectTransform>();
+                sirt.anchorMin = siAnchorMin;
+                sirt.anchorMax = Vector2.one;
+                sirt.sizeDelta = Vector2.zero;
+
+                // Adjust seed price transform
+                RectTransform sprt = seedPrice.GetComponent<RectTransform>();
+                sprt.anchorMin = Vector2.zero;
+                sprt.anchorMax = spAnchorMax;
+                sprt.sizeDelta = Vector2.zero;
             }
         }
 

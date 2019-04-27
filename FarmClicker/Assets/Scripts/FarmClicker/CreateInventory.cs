@@ -44,14 +44,9 @@ public class CreateInventory : MonoBehaviour
     {
         if (FarmManager.Instance.InventoryFlag)
         {
-            // 현재 첫 번째 GetChild를 할 때 상수(0)을 넣어 채소 목록과 과일 목록 모두를 채소 목록을 갱신하는 방식
-            // CropCount를 2차원 배열로 수정하여 과일의 개수도 추척, 관리하는 방식으로 변경
-            //for (int i = 0; i < FarmManager.Instance.crops[0].cropSprites.Length; i++)
-            //    transform.GetChild(0).GetChild(i).GetComponentInChildren<Text>().text = "x" + FarmManager.Instance.CropCount[i];
             for (int i = 0; i < FarmManager.Instance.crops.Length; i++)
                 for (int j = 0; j < FarmManager.Instance.crops[i].cropSprites.Length; j++)
                     transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + FarmManager.Instance.CropCount[i][j];
-                    // transform.GetChild(i).GetChild(j).GetComponentInChildren<Text>().text = "x" + FarmManager.Instance.CropCount[i][j];
         }
     }
 
@@ -87,8 +82,6 @@ public class CreateInventory : MonoBehaviour
                 // Add image component to crop image
                 Image image = cropImage.AddComponent<Image>();
                 image.sprite = FarmManager.Instance.crops[i].cropSprites[j].Sprites[0];
-                //image.sprite = FarmManager.Instance.crops[i].cropSprites[j];
-                //image.sprite = FarmManager.Instance.plants[i];
                 image.preserveAspect = true;
 
                 // Create crop count
