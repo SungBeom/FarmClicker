@@ -10856,136 +10856,169 @@ MonoBehaviour:
       - {fileID: 21300000, guid: 5d582b0c817d17e46a4374f4f239aba0, type: 3}
       - {fileID: 21300000, guid: e3c79a92c4537124988d4097b2b401a9, type: 3}
       growTime: 3
+      price: 0
     - sprites:
       - {fileID: 21300000, guid: dc7e06251ee421c4db158db05b868395, type: 3}
       - {fileID: 21300000, guid: 2781474218b0b6d46bf34a3e3067733c, type: 3}
       growTime: 3
+      price: 100
     - sprites:
       - {fileID: 21300000, guid: faab573193f79a042bad23676a4c89cb, type: 3}
       - {fileID: 21300000, guid: e732ae31abe51e34cbdbbbe4a12be1db, type: 3}
       growTime: 3
+      price: 200
     - sprites:
       - {fileID: 21300000, guid: b09cb056b722c2b4cb5ddbdb29826b5b, type: 3}
       - {fileID: 21300000, guid: 74b96b4dd8c2b3d4bb0ceb2f5b89f7c9, type: 3}
       growTime: 3
+      price: 300
     - sprites:
       - {fileID: 21300000, guid: 09d58eae71ba88946a36dbe1b2afa2df, type: 3}
       - {fileID: 21300000, guid: dac604e59cc666b428769b0f660c057d, type: 3}
       growTime: 3
+      price: 400
     - sprites:
       - {fileID: 21300000, guid: aa6c1f3b1a2393f40bd686808ca24e4f, type: 3}
       - {fileID: 21300000, guid: d002751d65ce2b94a9b7bdee75fd7802, type: 3}
       growTime: 3
+      price: 500
     - sprites:
       - {fileID: 21300000, guid: b8ac6d6655b5caa45b78afafb9510120, type: 3}
       - {fileID: 21300000, guid: 5fe159d9e1ca08044abf733e73662a29, type: 3}
       growTime: 3
+      price: 600
     - sprites:
       - {fileID: 21300000, guid: 4e3f30015074dc64db08df6d32153c30, type: 3}
       - {fileID: 21300000, guid: ac25bd19791d11740bb26e3e201e1931, type: 3}
       growTime: 3
+      price: 700
     - sprites:
       - {fileID: 21300000, guid: dd8fb7a9ee1aaf1428d7cff0f951ea94, type: 3}
       - {fileID: 21300000, guid: 5d4a0c928fb69f94f8fa016d46fafa17, type: 3}
       growTime: 3
+      price: 800
     - sprites:
       - {fileID: 21300000, guid: aa3bf8b39f5871146a53d7a5a9aa8c44, type: 3}
       - {fileID: 21300000, guid: 1183a9557bc5ba44abe14d91616edce7, type: 3}
       growTime: 3
+      price: 900
     - sprites:
       - {fileID: 21300000, guid: 75abe1d015350a349be5a798380619e4, type: 3}
       - {fileID: 21300000, guid: 2f9705c85e66ec54296d0cdc76317c5a, type: 3}
       growTime: 3
+      price: 1000
     - sprites:
       - {fileID: 21300000, guid: ca695be938c650946aa61cdac4ffca7d, type: 3}
       - {fileID: 21300000, guid: 0d17f1e13974bbe4fb2bb4b761e6735d, type: 3}
       growTime: 3
+      price: 1100
     - sprites:
       - {fileID: 21300000, guid: 81b74112d368d0e4e883da6b7ffa4618, type: 3}
       - {fileID: 21300000, guid: 7b87e722243ef994089b75732247a67e, type: 3}
       growTime: 3
+      price: 1200
     - sprites:
       - {fileID: 21300000, guid: a0b0804e9bc481f45bd5b195671f26e4, type: 3}
       - {fileID: 21300000, guid: 76020264f5dd1df4eb97c8148e2917dd, type: 3}
       growTime: 3
+      price: 1300
     - sprites:
       - {fileID: 21300000, guid: 3a79791a8605a4d40b0030a56d778502, type: 3}
       - {fileID: 21300000, guid: 7f52609dd3505c7408fb951845be4488, type: 3}
       growTime: 3
+      price: 1400
     - sprites:
       - {fileID: 21300000, guid: 20766d1bfd4665744ae93351ff565a8c, type: 3}
       - {fileID: 21300000, guid: 64dc9e6b95405754eac3b3414f568a57, type: 3}
       growTime: 3
+      price: 1500
   - cropSprites:
     - sprites:
       - {fileID: 21300000, guid: b90897fcd042361469da5be52af02c74, type: 3}
       - {fileID: 21300000, guid: 08fb682a5dc65e0469b67f5599039827, type: 3}
       growTime: 3
+      price: 0
     - sprites:
       - {fileID: 21300000, guid: 00375cd1240433546896d57728a204c2, type: 3}
       - {fileID: 21300000, guid: 043d24d58ba1ef14e8136b96ab575a6d, type: 3}
       growTime: 3
+      price: 100
     - sprites:
       - {fileID: 21300000, guid: c8906106330eb3f46add0304dc63c048, type: 3}
       - {fileID: 21300000, guid: 971f99e6528d1bc43ae71f4d8ef2f1af, type: 3}
       growTime: 3
+      price: 200
     - sprites:
       - {fileID: 21300000, guid: 462d17f3e1d751a44bf383b6f6cf4455, type: 3}
       - {fileID: 21300000, guid: b5fe579c4478a4b4e8782072c464e586, type: 3}
       growTime: 3
+      price: 300
     - sprites:
       - {fileID: 21300000, guid: 482d630aecbb13d43ad17ac0564e9697, type: 3}
       - {fileID: 21300000, guid: 4e60bc17bb04c4040b980f056639ff29, type: 3}
       growTime: 3
+      price: 400
     - sprites:
       - {fileID: 21300000, guid: 3943cdb71bc58984697f708f329292f5, type: 3}
       - {fileID: 21300000, guid: 6372c24ced3bc1240a34db8db522a33c, type: 3}
       growTime: 3
+      price: 500
     - sprites:
       - {fileID: 21300000, guid: a035da4ee7e05f44fa762e632dc17726, type: 3}
       - {fileID: 21300000, guid: 969e942d671ed4d49a423afad824bbeb, type: 3}
       growTime: 3
+      price: 600
     - sprites:
       - {fileID: 21300000, guid: 911047ed15a8df94e862c330f07d18f8, type: 3}
       - {fileID: 21300000, guid: 006933893e8175c44a208a8c00c5db9d, type: 3}
       growTime: 3
+      price: 700
     - sprites:
       - {fileID: 21300000, guid: 34265881d3375f04fad128b6e55fa685, type: 3}
       - {fileID: 21300000, guid: 9afc63ea28451334ea7a537d50b41856, type: 3}
       growTime: 3
+      price: 800
     - sprites:
       - {fileID: 21300000, guid: d014d96703559634cb8b3b0b2e2a012d, type: 3}
       - {fileID: 21300000, guid: 1203535a78d145d4aaae5936f34d9365, type: 3}
       growTime: 3
+      price: 900
     - sprites:
       - {fileID: 21300000, guid: 5b9ba92bfd5729045929350142015e04, type: 3}
       - {fileID: 21300000, guid: 08211dec55b437c4abb3447b667d7a31, type: 3}
       growTime: 3
+      price: 1000
     - sprites:
       - {fileID: 21300000, guid: ed3d8d52165db494f9dcda675824bf5a, type: 3}
       - {fileID: 21300000, guid: 52fe1fa1b95ada445971b815fc186fd6, type: 3}
       growTime: 3
+      price: 1100
     - sprites:
       - {fileID: 21300000, guid: ca9853e407f2e18449c633c3fd637e6d, type: 3}
       - {fileID: 21300000, guid: c02c820cab04cce4396b445da12ee182, type: 3}
       growTime: 3
+      price: 1200
     - sprites:
       - {fileID: 21300000, guid: 0c3662d411d76334aacbc954c32fd997, type: 3}
       - {fileID: 21300000, guid: 53768f45189db93448b498cf2c03cdfc, type: 3}
       growTime: 3
+      price: 1300
     - sprites:
       - {fileID: 21300000, guid: 36f8b58dac9d48149a81eaa532f5d450, type: 3}
       - {fileID: 21300000, guid: 4a3af7e9a2596df4589d234c83b5777c, type: 3}
       growTime: 3
+      price: 1400
     - sprites:
       - {fileID: 21300000, guid: d41e63d779ab0d04ba3b5578fe9f3de7, type: 3}
       - {fileID: 21300000, guid: c1eecc1b1e376d841b3fb32751d65c23, type: 3}
       growTime: 3
+      price: 1500
   growSpeed: 1
   automaticFoodCount: 3
   foodGenerationCycle: 3
   mainFont: {fileID: 12800000, guid: 37794d5987838bf4687617714e68a039, type: 3}
   foodText: {fileID: 873645306}
+  goldText: {fileID: 586327946}
 --- !u!4 &1585099791
 Transform:
   m_ObjectHideFlags: 0

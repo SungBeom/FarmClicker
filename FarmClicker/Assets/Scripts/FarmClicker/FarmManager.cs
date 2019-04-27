@@ -44,6 +44,8 @@ public class FarmManager : MonoBehaviour
             cropCount[i] = new int[crops[i].cropSprites.Length];
 
         // foodCount, goldAmount를 전체 GM에서 받아옴
+        goldAmount = 10000;//
+        goldText.text = "x" + goldAmount;//
 
         // automaticFoodCount는 전체 GM에 있거나, 전체 GM에서 받아오는 구도
 
@@ -134,6 +136,7 @@ public class FarmManager : MonoBehaviour
 
     // test를 위한 코드, 실제 뷰로 대체하거나 구조 변경 요망
     public Text foodText;
+    public Text goldText;
 
     IEnumerator AutomaticFarming()
     {
@@ -165,6 +168,7 @@ public class FarmManager : MonoBehaviour
         {
             get { return sprites; }
         }
+
         [SerializeField]
         private float growTime = 1.0f;
         public float GrowTime
@@ -172,9 +176,16 @@ public class FarmManager : MonoBehaviour
             get { return growTime; }
         }
 
-        public CropSprite()
+        [SerializeField]
+        private int price = 0;
+        public int Price
         {
-            sprites = new Sprite[2];
+            get { return price; }
         }
+
+        //public CropSprite()
+        //{
+        //    sprites = new Sprite[2];
+        //}
     }
 }

@@ -86,7 +86,7 @@ public class CreateSeed : MonoBehaviour
 
                 // Add text component to seed price
                 Text text = seedPrice.AddComponent<Text>();
-                text.text = "x" + FarmManager.Instance.CropCount[i][j];
+                text.text = FarmManager.Instance.crops[i].cropSprites[j].Price + "원";
                 text.font = FarmManager.Instance.mainFont;
                 text.fontSize = fontSize;
                 text.alignment = TextAnchor.MiddleCenter;

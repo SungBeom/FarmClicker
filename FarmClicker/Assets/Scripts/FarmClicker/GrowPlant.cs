@@ -73,27 +73,35 @@ public class GrowPlant : MonoBehaviour
 
     IEnumerator Growing(int category)
     {
-        growState[category] = GrowState.Growing;
         int growingCategory = category;
-        index[growingCategory] = FarmManager.Instance.Select[growingCategory];
+        int price = FarmManager.Instance.crops[category].cropSprites[FarmManager.Instance.Select[category]].Price;
 
-        plantImage[growingCategory].GetComponent<Image>().enabled = true;
-        plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[0];
-
-        test.text = "Grow\n";//
-        for (int i = 1; i < FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].GrowTime; i++)
+        if (FarmManager.Instance.GoldAmount >= (ulong)price)
         {
-            test.text += ".";//
-            // 크기가 커지는 방식
-            plantImage[growingCategory].localScale += new Vector3(0.1f, 0.1f, 0.1f);
-            plantImage[growingCategory].Translate(0.0f, 20f / Screen.height, 0.0f);
-            //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
-            // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
-            yield return new WaitForSeconds(FarmManager.Instance.GrowSpeed / FarmManager.Instance.AccelerationRatio);
-        }
-        plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
-        test.text = "Test";//
+            FarmManager.Instance.GoldAmount -= (ulong)price;
+            FarmManager.Instance.goldText.text = "x" + FarmManager.Instance.GoldAmount;
 
-        growState[growingCategory] = GrowState.CanHarvest;
+            growState[category] = GrowState.Growing;
+            index[growingCategory] = FarmManager.Instance.Select[growingCategory];
+
+            plantImage[growingCategory].GetComponent<Image>().enabled = true;
+            plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[0];
+
+            test.text = "Grow\n";//
+            for (int i = 1; i < FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].GrowTime; i++)
+            {
+                test.text += ".";//
+                // 크기가 커지는 방식 -> 변경 예정
+                plantImage[growingCategory].localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                plantImage[growingCategory].Translate(0.0f, 20f / Screen.height, 0.0f);
+                //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
+                // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
+                yield return new WaitForSeconds(FarmManager.Instance.GrowSpeed / FarmManager.Instance.AccelerationRatio);
+            }
+            plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
+            test.text = "Test";//
+
+            growState[growingCategory] = GrowState.CanHarvest;
+        }
     }
 }

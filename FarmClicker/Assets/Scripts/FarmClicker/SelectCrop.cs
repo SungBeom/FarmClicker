@@ -18,19 +18,12 @@ public class SelectCrop : MonoBehaviour
             GetComponent<Image>().color = Color.grey;
     }
 
-    // public 임시 추가
-    public void ButtonClick()
+    void ButtonClick()
     {
         int temp = FarmManager.Instance.Select[FarmManager.Instance.Category];
         FarmManager.Instance.Select[FarmManager.Instance.Category] = plantIndex;
 
         transform.parent.GetChild(temp).GetComponent<Image>().color = Color.grey;
         GetComponent<Image>().color = Color.white;
-    }
-
-    // 임시 추가
-    public void RemoveFocus()
-    {
-        GetComponent<Image>().color = Color.grey;
     }
 }
