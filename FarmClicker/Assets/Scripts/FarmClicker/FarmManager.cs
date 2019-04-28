@@ -69,6 +69,9 @@ public class FarmManager : MonoBehaviour
         get { return cropCount; }
     }
 
+    // 임시로 2개로 테스트
+    public Sprite[] plantSprite = new Sprite[2];
+
     private ulong foodCount;
     public ulong FoodCount
     {

@@ -84,8 +84,11 @@ public class GrowPlant : MonoBehaviour
             growState[category] = GrowState.Growing;
             index[growingCategory] = FarmManager.Instance.Select[growingCategory];
 
+            // 자라는 전체 시간에 따라 sprite 상태를 바꿔주는 알고리즘 필요
             plantImage[growingCategory].GetComponent<Image>().enabled = true;
-            plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[0];
+            // plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[0];
+            // 임시로 sprite 바꿔서 테스트
+            plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.plantSprite[growingCategory];
 
             test.text = "Grow\n";//
             for (int i = 1; i < FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].GrowTime; i++)
