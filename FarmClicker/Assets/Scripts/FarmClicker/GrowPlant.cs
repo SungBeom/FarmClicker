@@ -13,6 +13,8 @@ public class GrowPlant : MonoBehaviour
     int category;
     int[] index;
 
+    float[] imageHeight;
+
     enum GrowState { CanGrow, Growing, CanHarvest };
     GrowState[] growState;
 
@@ -24,13 +26,20 @@ public class GrowPlant : MonoBehaviour
         plantImage[0] = transform.Find("VegetableImage");
         plantImage[1] = transform.Find("FruitImage");
         plantImage[0].GetComponent<Image>().enabled = false;
-        plantImage[1].GetComponent<Image>().enabled = false;
+        //plantImage[1].GetComponent<Image>().enabled = false;
+        Image[] images = plantImage[1].GetComponentsInChildren<Image>();
+        for (int i = 0; i < images.Length; i++)
+            images[i].enabled = false;
 
         test = GetComponentInChildren<Text>();//
 
         inventory = GameObject.Find("Canvas").transform.Find("InventoryView").Find("Viewport").Find("Content");
 
         index = new int[2];
+
+        imageHeight = new float[2];
+        imageHeight[0] = 1.1458333333f;
+        imageHeight[1] = 1.8229166667f;
 
         growState = new GrowState[2];
         growState[0] = GrowState.CanGrow;
@@ -50,12 +59,18 @@ public class GrowPlant : MonoBehaviour
         {
             if (growState[i] == GrowState.CanHarvest)
             {
-                plantImage[i].GetComponent<Image>().sprite = null;
-                plantImage[i].localScale = Vector3.one;
+                Image[] images = plantImage[i].GetComponentsInChildren<Image>();
+
+                //plantImage[i].GetComponent<Image>().sprite = null;
+                for (int j = 0; j < images.Length; j++)
+                    images[j].sprite = null;
+                //plantImage[i].localScale = Vector3.one;
                 plantImage[i].transform.position =
-                    new Vector3(plantImage[i].transform.position.x, 1.1458333333f, plantImage[i].transform.position.z);
+                    new Vector3(plantImage[i].transform.position.x, imageHeight[i], plantImage[i].transform.position.z);
                 //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
                 plantImage[i].GetComponent<Image>().enabled = false;
+                for (int j = 0; j < images.Length; j++)
+                    images[j].enabled = false;
 
                 FarmManager.Instance.CropCount[i][index[i]]++;
                 // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
@@ -95,13 +110,23 @@ public class GrowPlant : MonoBehaviour
             {
                 test.text += ".";//
                 // 크기가 커지는 방식 -> 변경 예정
-                plantImage[growingCategory].localScale += new Vector3(0.1f, 0.1f, 0.1f);
-                plantImage[growingCategory].Translate(0.0f, 20f / Screen.height, 0.0f);
+                // plantImage[growingCategory].localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                // plantImage[growingCategory].Translate(0.0f, 20f / Screen.height, 0.0f);
                 //vegetableImage.Translate(0.0f, 0.0104166667f/*20 / 1920(높이)*/, 0.0f);
                 // AccelerationRatio를 이용해 식물이 자라는 속도를 증가시킴
                 yield return new WaitForSeconds(FarmManager.Instance.GrowSpeed / FarmManager.Instance.AccelerationRatio);
             }
-            plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
+            if (growingCategory == 0)
+                plantImage[growingCategory].GetComponent<Image>().sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
+            else
+            {
+                Image[] fruits = plantImage[growingCategory].GetComponentsInChildren<Image>();
+                for (int i = 1; i < fruits.Length; i++)
+                {
+                    fruits[i].enabled = true;
+                    fruits[i].sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
+                }
+            }
             test.text = "Test";//
 
             growState[growingCategory] = GrowState.CanHarvest;
