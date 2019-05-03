@@ -17,6 +17,7 @@ public class GrowPlant : MonoBehaviour
 
     enum GrowState { CanGrow, Growing, CanHarvest };
     GrowState[] growState;
+    enum FarmMode { Plant, Harvest, Shred };
 
     void Start()
     {
@@ -51,38 +52,44 @@ public class GrowPlant : MonoBehaviour
         category = FarmManager.Instance.Category;
 
         //  GrowState가 CanGrow상태일 때, Growing Coroutine 호출
-        if (growState[category] == GrowState.CanGrow) StartCoroutine("Growing", category);
-
+        if (FarmManager.Instance.GameMode == (int)FarmMode.Plant && growState[category] == GrowState.CanGrow)
+            StartCoroutine("Growing", category);
         // CanHarvest인 것을 전부 검사
         // CanGrow 상태라면 호출하지 않아도 됨 -> 개선 여지 있음
-        for (int i = 0; i < plantImage.Length; i++)
+        else if (FarmManager.Instance.GameMode == (int)FarmMode.Harvest)
         {
-            if (growState[i] == GrowState.CanHarvest)
+            for (int i = 0; i < plantImage.Length; i++)
             {
-                Image[] images = plantImage[i].GetComponentsInChildren<Image>();
-
-                //plantImage[i].GetComponent<Image>().sprite = null;
-                for (int j = 0; j < images.Length; j++)
-                    images[j].sprite = null;
-                //plantImage[i].localScale = Vector3.one;
-                plantImage[i].transform.position =
-                    new Vector3(plantImage[i].transform.position.x, imageHeight[i], plantImage[i].transform.position.z);
-                //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
-                plantImage[i].GetComponent<Image>().enabled = false;
-                for (int j = 0; j < images.Length; j++)
-                    images[j].enabled = false;
-
-                FarmManager.Instance.CropCount[i][index[i]]++;
-                // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
-                if (Random.Range(1, 100) / 100f < FarmManager.Instance.HarvestRatio)
+                if (growState[i] == GrowState.CanHarvest)
                 {
-                    Debug.Log("수확 대성공!");
+                    Image[] images = plantImage[i].GetComponentsInChildren<Image>();
+
+                    //plantImage[i].GetComponent<Image>().sprite = null;
+                    for (int j = 0; j < images.Length; j++)
+                        images[j].sprite = null;
+                    //plantImage[i].localScale = Vector3.one;
+                    plantImage[i].transform.position =
+                        new Vector3(plantImage[i].transform.position.x, imageHeight[i], plantImage[i].transform.position.z);
+                    //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
+                    plantImage[i].GetComponent<Image>().enabled = false;
+                    for (int j = 0; j < images.Length; j++)
+                        images[j].enabled = false;
+
                     FarmManager.Instance.CropCount[i][index[i]]++;
+                    // 일정 확률로 대성공(재료가 1개가 아닌 2개가 얻어짐)
+                    if (Random.Range(1, 100) / 100f < FarmManager.Instance.HarvestRatio)
+                    {
+                        Debug.Log("수확 대성공!");
+                        FarmManager.Instance.CropCount[i][index[i]]++;
+                    }
+                    if (FarmManager.Instance.InventoryFlag)
+                        inventory.transform.GetChild(i).GetChild(index[i]).GetComponentInChildren<Text>().text = "x" + FarmManager.Instance.CropCount[i][index[i]];
+                    growState[i] = GrowState.CanGrow;
                 }
-                if (FarmManager.Instance.InventoryFlag)
-                    inventory.transform.GetChild(i).GetChild(index[i]).GetComponentInChildren<Text>().text = "x" + FarmManager.Instance.CropCount[i][index[i]];
-                growState[i] = GrowState.CanGrow;
             }
+        }
+        else if (FarmManager.Instance.GameMode == (int)FarmMode.Shred)
+        {
         }
     }
 

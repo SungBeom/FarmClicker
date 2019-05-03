@@ -62,6 +62,9 @@ public class FarmManager : MonoBehaviour
         StartCoroutine("AutomaticFarming");
     }
 
+    private int gameMode;
+    public int GameMode { get; set; }
+
     public Crop[] crops;
     private int[][] cropCount;
     public int[][] CropCount
