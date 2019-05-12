@@ -65,14 +65,15 @@ public class GrowPlant : MonoBehaviour
                     Image[] images = plantImage[i].GetComponentsInChildren<Image>();
 
                     //plantImage[i].GetComponent<Image>().sprite = null;
-                    for (int j = 0; j < images.Length; j++)
+                    for (int j = 1; j < images.Length; j++)
                         images[j].sprite = null;
                     //plantImage[i].localScale = Vector3.one;
                     plantImage[i].transform.position =
                         new Vector3(plantImage[i].transform.position.x, imageHeight[i], plantImage[i].transform.position.z);
                     //new Vector3(vegetableImage.transform.position.x, 1100f / Screen.height, vegetableImage.transform.position.z);
-                    plantImage[i].GetComponent<Image>().enabled = false;
-                    for (int j = 0; j < images.Length; j++)
+                    if (i == 0)
+                        plantImage[i].GetComponent<Image>().enabled = false;
+                    for (int j = 1; j < images.Length; j++)
                         images[j].enabled = false;
 
                     FarmManager.Instance.CropCount[i][index[i]]++;
