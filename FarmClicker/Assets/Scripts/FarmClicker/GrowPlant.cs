@@ -13,6 +13,9 @@ public class GrowPlant : MonoBehaviour
     int category;
     int[] index;
 
+    int selectedFruit;
+    Coroutine fruitGrowing;
+
     float[] imageHeight;
 
     enum GrowState { CanGrow, Growing, CanHarvest };
@@ -53,7 +56,14 @@ public class GrowPlant : MonoBehaviour
 
         //  GrowState가 CanGrow상태일 때, Growing Coroutine 호출
         if (FarmManager.Instance.GameMode == (int)FarmMode.Plant && growState[category] == GrowState.CanGrow)
-            StartCoroutine("Growing", category);
+        {
+            if (category == 0) StartCoroutine("Growing", category);
+            else
+            {
+                selectedFruit = FarmManager.Instance.Select[category];
+                fruitGrowing = StartCoroutine("Growing", category);
+            }
+        }
         // CanHarvest인 것을 전부 검사
         // CanGrow 상태라면 호출하지 않아도 됨 -> 개선 여지 있음
         else if (FarmManager.Instance.GameMode == (int)FarmMode.Harvest)
@@ -85,12 +95,22 @@ public class GrowPlant : MonoBehaviour
                     }
                     if (FarmManager.Instance.InventoryFlag)
                         inventory.transform.GetChild(i).GetChild(index[i]).GetComponentInChildren<Text>().text = "x" + FarmManager.Instance.CropCount[i][index[i]];
-                    growState[i] = GrowState.CanGrow;
+
+                    if (i == 0)
+                        growState[i] = GrowState.CanGrow;
+                    else
+                        fruitGrowing = StartCoroutine("Growing", 1);
                 }
             }
         }
         else if (FarmManager.Instance.GameMode == (int)FarmMode.Shred)
         {
+            StopCoroutine(fruitGrowing);
+            Image[] images = plantImage[1].GetComponentsInChildren<Image>();
+            for (int i = 0; i < images.Length; i++)
+                images[i].enabled = false;
+
+            growState[1] = GrowState.CanGrow;
         }
     }
 
@@ -132,7 +152,7 @@ public class GrowPlant : MonoBehaviour
                 for (int i = 1; i < fruits.Length; i++)
                 {
                     fruits[i].enabled = true;
-                    fruits[i].sprite = FarmManager.Instance.crops[growingCategory].cropSprites[index[growingCategory]].Sprites[1];
+                    fruits[i].sprite = FarmManager.Instance.crops[growingCategory].cropSprites[selectedFruit].Sprites[1];
                 }
             }
             test.text = "Test";//
